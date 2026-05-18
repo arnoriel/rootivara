@@ -13,10 +13,11 @@ export default function Hero() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
         paddingBottom: '0',
         position: 'relative',
         overflow: 'hidden',
+        paddingTop: 0,
       }}
     >
       {/* Background subtle gradient */}
@@ -68,7 +69,7 @@ export default function Hero() {
           padding: '0 24px',
           maxWidth: '800px',
           width: '100%',
-          paddingTop: '120px',
+          paddingTop: 'clamp(80px, 12vw, 140px)',
         }}
       >
         {/* Badge */}
@@ -229,7 +230,7 @@ export default function Hero() {
         >
           {/* Floating tech cards inside hero visual */}
           <div
-            className="float-anim"
+            className="float-anim hero-float-card"
             style={{
               position: 'absolute',
               top: '30px',
@@ -248,7 +249,7 @@ export default function Hero() {
           </div>
 
           <div
-            className="float-anim-delay"
+            className="float-anim-delay hero-float-card"
             style={{
               position: 'absolute',
               top: '30px',
@@ -340,6 +341,14 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 640px) {
+          .hero-float-card {
+            display: none !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
