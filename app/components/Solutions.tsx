@@ -89,7 +89,7 @@ export default function Solutions() {
               textTransform: 'uppercase',
             }}
           >
-            ✦ Solusi Kami
+            Solusi Kami
           </div>
 
           <div

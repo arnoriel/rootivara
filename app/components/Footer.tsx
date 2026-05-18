@@ -31,7 +31,7 @@ export default function Footer() {
           {/* Brand */}
           <div style={{ maxWidth: '280px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '14px' }}>
-              <div
+              {/* <div
                 style={{
                   width: '28px',
                   height: '28px',
@@ -46,7 +46,7 @@ export default function Footer() {
                   <path d="M3 8 L8 3 L13 8 L8 13 Z" fill="white" opacity="0.9"/>
                   <circle cx="8" cy="8" r="2.5" fill="white"/>
                 </svg>
-              </div>
+              </div> */}
               <span style={{ fontWeight: 700, fontSize: '18px', letterSpacing: '-0.3px' }}>rootivara</span>
             </div>
             <p style={{ fontSize: '13px', color: '#6b7280', lineHeight: 1.7, fontWeight: 400 }}>

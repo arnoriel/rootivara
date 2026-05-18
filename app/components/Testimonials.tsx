@@ -117,7 +117,7 @@ export default function Testimonials() {
               textTransform: 'uppercase',
             }}
           >
-            ⭐ Kata Klien Kami
+            Kata Klien Kami
           </div>
           <h2
             className="reveal reveal-delay-1"
