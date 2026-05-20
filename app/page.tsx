@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Problems from "./components/Problems";
 import Solutions from "./components/Solutions";
+import Portfolio from "./components/Portfolio";
 import Testimonials from "./components/Testimonials";
 import Pricing from "./components/Pricing";
 import CTA from "./components/CTA";
@@ -20,6 +21,7 @@ export default function Home() {
       <About />
       <Problems />
       <Solutions />
+      <Portfolio />
       <Testimonials />
       <Pricing />
       <CTA />

@@ -33,6 +33,16 @@ const projects = [
     title: 'Iron Clad',
     category: 'Web App',
   },
+  {
+    url: 'https://rentalmobil-kappa.vercel.app',
+    title: 'Rental Mobil',
+    category: 'Web App',
+  },
+  {
+    url: 'https://outdoor-job.vercel.app',
+    title: 'Outdoor Job',
+    category: 'Web App',
+  },
 ];
 
 function PortfolioCard({
