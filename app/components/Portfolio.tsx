@@ -43,6 +43,11 @@ const projects = [
     title: 'Outdoor Job',
     category: 'Web App',
   },
+  {
+    url: 'https://partnerhaus.vercel.app',
+    title: 'Partner Haus',
+    category: 'Web App',
+  },
 ];
 
 function PortfolioCard({
