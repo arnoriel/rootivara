@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://rootivara.com"),
+
   title: "Rootivara | Organic Excellence in Digital Design",
   description:
     "Rootivara adalah studio digital craftsmanship yang membangun website, landing page, dan ekosistem digital berkualitas premium untuk brand modern.",
@@ -19,11 +21,38 @@ export const metadata: Metadata = {
     shortcut: "/favlogo.png",
     apple: "/favlogo.png",
   },
+
+  // ✅ Canonical URL
+  alternates: {
+    canonical: "https://rootivara.com",
+  },
+  verification: {
+    google: "U75WPOwiYvog4tyq21a-gTQroS9WSH0vjWl2ap3d8Po",
+  },
+
   openGraph: {
     title: "Rootivara | Organic Excellence in Digital Design",
     description:
       "Studio digital craftsmanship — kami membangun website dan platform digital premium yang mengangkat brand Anda.",
+    url: "https://rootivara.com",
+    siteName: "Rootivara",
     type: "website",
+    images: [
+      {
+        url: "/favlogo.png",
+        width: 1200,
+        height: 630,
+        alt: "Rootivara - Organic Excellence in Digital Design",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Rootivara | Organic Excellence in Digital Design",
+    description:
+      "Studio digital craftsmanship — kami membangun website dan platform digital premium yang mengangkat brand Anda.",
+    images: ["/favlogo.png"],
   },
 };
 
