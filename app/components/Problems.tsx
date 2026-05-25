@@ -1,232 +1,108 @@
-'use client';
-
-import { useEffect, useRef } from 'react';
-
-const problems = [
-  {
-    icon: '🚫',
-    title: 'Tidak Ada di Google',
-    desc: 'Calon pelanggan mencari bisnis Anda secara online tapi tidak menemukannya — mereka langsung pergi ke kompetitor.',
-  },
-  {
-    icon: '💸',
-    title: 'Kehilangan Revenue Setiap Hari',
-    desc: 'Tanpa platform digital, Anda mengandalkan mulut ke mulut saja. Setiap hari tanpa website = peluang penjualan yang hilang.',
-  },
-  {
-    icon: '😤',
-    title: 'Bergantung pada Marketplace',
-    desc: 'Fee platform terus naik, algoritma berubah sewaktu-waktu, dan Anda tidak punya kendali atas data pelanggan sendiri.',
-  },
-  {
-    icon: '📉',
-    title: 'Kesan Kurang Profesional',
-    desc: 'Di era digital, bisnis tanpa website atau app terlihat kurang kredibel di mata calon mitra dan investor.',
-  },
-  {
-    icon: '⏰',
-    title: 'Proses Manual yang Menyita Waktu',
-    desc: 'Order lewat chat satu per satu, rekap manual di spreadsheet — waktu Anda habis untuk operasional bukan untuk berkembang.',
-  },
-  {
-    icon: '🔒',
-    title: 'Data Bisnis Tidak Aman',
-    desc: 'Mengandalkan platform pihak ketiga berarti data bisnis dan pelanggan Anda ada di tangan orang lain, kapan saja bisa ditutup.',
-  },
-];
-
 export default function Problems() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.querySelectorAll('.reveal').forEach((el) => {
-              el.classList.add('visible');
-            });
-          }
-        });
-      },
-      { threshold: 0.05 }
-    );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
+  const waLink = `https://wa.me/62895605476149?text=${encodeURIComponent(
+    'Halo rootivara! Saya ingin konsultasi dan mulai proyek digital bersama kalian.'
+  )}`;
 
   return (
     <section
-      id="masalah"
-      ref={sectionRef}
-      style={{
-        padding: 'clamp(60px, 10vw, 120px) 24px',
-        background: '#0e0e0e',
-        overflow: 'hidden',
-        position: 'relative',
-      }}
+      id="services"
+      className="py-10 md:py-24 px-4 md:px-16 max-w-[1280px] mx-auto"
     >
-      {/* Background texture */}
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          backgroundImage:
-            'radial-gradient(rgba(124,106,255,0.07) 1px, transparent 1px)',
-          backgroundSize: '32px 32px',
-          pointerEvents: 'none',
-        }}
-      />
-      <div
-        style={{
-          position: 'absolute',
-          top: '10%',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          width: '600px',
-          height: '300px',
-          background:
-            'radial-gradient(ellipse, rgba(124,106,255,0.15) 0%, transparent 70%)',
-          filter: 'blur(60px)',
-          pointerEvents: 'none',
-        }}
-      />
-
-      <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
-        {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: 'clamp(40px, 6vw, 72px)' }}>
-          <div
-            className="reveal"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '6px',
-              background: 'rgba(239,68,68,0.12)',
-              border: '1px solid rgba(239,68,68,0.25)',
-              borderRadius: '100px',
-              padding: '6px 14px',
-              marginBottom: '20px',
-              fontSize: '12px',
-              fontWeight: 600,
-              color: '#f87171',
-              letterSpacing: '0.5px',
-              textTransform: 'uppercase',
-            }}
-          >
-            Kenali Masalahnya
-          </div>
-
-          <h2
-            className="reveal reveal-delay-1"
-            style={{
-              fontSize: 'clamp(28px, 4.5vw, 52px)',
-              fontWeight: 800,
-              letterSpacing: '-1.5px',
-              lineHeight: 1.1,
-              color: '#ffffff',
-              marginBottom: '16px',
-            }}
-          >
-            Apa yang Terjadi Saat Bisnis{' '}
-            <span
-              style={{
-                background: 'linear-gradient(135deg, #f87171, #ef4444)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-              }}
-            >
-              Tidak Punya
-            </span>{' '}
-            Platform Digital?
+      {/* Header row */}
+      <div className="flex justify-between items-end mb-6 md:mb-12 reveal">
+        <div className="max-w-2xl">
+          <span className="text-[10px] md:text-[11px] font-semibold text-[#775a19] uppercase tracking-[0.3em] block mb-2 md:mb-4">
+            Expertise
+          </span>
+          <h2 className="text-[26px] md:text-[40px] font-semibold leading-tight tracking-[-0.02em] text-[#00190d]">
+            Strategic Design Ecosystems
           </h2>
-          <p
-            className="reveal reveal-delay-2"
-            style={{
-              fontSize: 'clamp(14px, 1.5vw, 17px)',
-              color: '#9ca3af',
-              lineHeight: 1.7,
-              maxWidth: '520px',
-              margin: '0 auto',
-            }}
+        </div>
+        <a
+          href="#portfolio"
+          className="hidden md:block text-[11px] font-semibold text-[#00190d] uppercase tracking-[0.15em] border-b border-[#00190d] pb-1 hover:text-[#775a19] hover:border-[#775a19] transition-colors"
+        >
+          All Capabilities
+        </a>
+      </div>
+
+      {/* Grid */}
+      <div className="grid grid-cols-12 gap-3 md:gap-6">
+        {/* Card 1 — large */}
+        <div className="col-span-12 md:col-span-8 bg-[#f5f3ee] p-5 md:p-10 rounded-2xl border border-[#c1c8c2]/20 hover:border-[#775a19]/40 transition-colors group reveal reveal-delay-1">
+          <span className="material-symbols-outlined text-2xl md:text-4xl text-[#775a19] mb-3 md:mb-6 block">web</span>
+          <h3 className="text-lg md:text-2xl font-medium tracking-tight text-[#00190d] mb-2 md:mb-4">
+            High-Performance Web Development
+          </h3>
+          <p className="text-sm md:text-base text-[#414843] leading-relaxed max-w-md mb-4 md:mb-8">
+            We don&apos;t just build sites; we architect lightning-fast, secure, and infinitely scalable
+            digital platforms that function as your 24/7 sales powerhouse.
+          </p>
+          <div className="flex flex-wrap gap-2 md:gap-3">
+            <span className="bg-white px-3 py-1 md:px-4 md:py-1.5 rounded text-[10px] md:text-[11px] font-medium text-[#8b9381] border border-[#c1c8c2]/30 uppercase tracking-wider">
+              React / Next.js
+            </span>
+            <span className="bg-white px-3 py-1 md:px-4 md:py-1.5 rounded text-[10px] md:text-[11px] font-medium text-[#8b9381] border border-[#c1c8c2]/30 uppercase tracking-wider">
+              Headless CMS
+            </span>
+          </div>
+        </div>
+
+        {/* Card 2 — dark accent */}
+        <div className="col-span-12 md:col-span-4 bg-[#00190d] text-white p-5 md:p-10 rounded-2xl flex flex-col justify-between reveal reveal-delay-2">
+          <div>
+            <span className="material-symbols-outlined text-2xl md:text-4xl text-[#e9c176] mb-3 md:mb-6 block">auto_awesome</span>
+            <h3 className="text-lg md:text-2xl font-medium tracking-tight mb-2 md:mb-4">Elite Landing Pages</h3>
+            <p className="text-sm md:text-base opacity-80 leading-relaxed">
+              Conversion-optimized experiences designed to turn clicks into loyal advocates.
+            </p>
+          </div>
+          <a
+            href={waLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-fit border-b border-[#e9c176] py-1.5 md:py-2 text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.15em] text-[#e9c176] hover:text-white hover:border-white transition-colors mt-4 md:mt-0"
           >
-            Ribuan bisnis kehilangan pelanggan setiap harinya karena masalah-masalah ini.
-            Apakah Anda salah satunya?
+            Inquire Now
+          </a>
+        </div>
+
+        {/* Card 3 — small */}
+        <div className="col-span-6 md:col-span-4 bg-white p-5 md:p-10 rounded-2xl border border-[#c1c8c2]/20 editorial-shadow reveal reveal-delay-3">
+          <span className="material-symbols-outlined text-2xl md:text-4xl text-[#775a19] mb-3 md:mb-6 block">query_stats</span>
+          <h3 className="text-base md:text-2xl font-medium tracking-tight text-[#00190d] mb-2 md:mb-4">SEO Architecture</h3>
+          <p className="text-sm md:text-base text-[#414843] leading-relaxed">
+            Organic visibility built into the foundation, not bolted on as an afterthought.
           </p>
         </div>
 
-        {/* Problems grid */}
-        <div
-          className="problems-grid"
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '16px',
-          }}
-        >
-          {problems.map((problem, i) => (
-            <div
-              key={problem.title}
-              className={`reveal reveal-delay-${Math.min(i + 1, 5)}`}
-              style={{
-                background: 'rgba(255,255,255,0.03)',
-                border: '1px solid rgba(255,255,255,0.07)',
-                borderRadius: '20px',
-                padding: 'clamp(20px, 2.5vw, 28px)',
-                transition: 'all 0.3s ease',
-                cursor: 'default',
-                backdropFilter: 'blur(8px)',
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.background = 'rgba(239,68,68,0.06)';
-                (e.currentTarget as HTMLElement).style.borderColor = 'rgba(239,68,68,0.2)';
-                (e.currentTarget as HTMLElement).style.transform = 'translateY(-4px)';
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.03)';
-                (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.07)';
-                (e.currentTarget as HTMLElement).style.transform = 'translateY(0)';
-              }}
+        {/* Card 4 — wide with image */}
+        <div className="col-span-6 md:col-span-8 bg-[#f0eee9] p-5 md:p-10 rounded-2xl flex items-center gap-5 md:gap-8 border border-[#c1c8c2]/20 reveal reveal-delay-4">
+          <div className="hidden sm:block w-32 h-32 md:w-44 md:h-44 bg-white rounded-xl rotate-3 shrink-0 editorial-shadow overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUn1X6cSQ0T0gyK4MWPt_fknidxcKZN7JFJmLcPH5-83nAvL2q7QxqC99uCoSPzrRTNcUHA6tLXqruVIv23pSEndExB2dFyWyLak4oQ_h02yEF3ZYQ0w21BuSaOQJvvuX32yUv7_1Ux-G5RSJcAtR6KfRsXd1KWt4PapEPrd4qXOwjtJNGnsDmQK4SOhvQwKIbmuubE_QcMY-tqchhBxqVOt0rjANuEH064nCR4ZISqvkbE9-Zo8BEvKIfFQynhhSijKlaz1z1dWcU"
+              alt="Analytics dashboard"
+              className="w-full h-full object-cover rounded-xl"
+            />
+          </div>
+          <div>
+            <h3 className="text-base md:text-2xl font-medium tracking-tight text-[#00190d] mb-2 md:mb-4">Brand Integration</h3>
+            <p className="text-sm md:text-base text-[#414843] leading-relaxed mb-3 md:mb-6">
+              Visual identity systems that bridge the gap between physical luxury and digital interaction.
+            </p>
+            <a
+              href={waLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] md:text-[11px] font-semibold text-[#775a19] uppercase tracking-[0.15em] hover:translate-x-1 transition-transform inline-flex items-center gap-2"
             >
-              <div style={{ fontSize: '28px', marginBottom: '14px' }}>{problem.icon}</div>
-              <div
-                style={{
-                  fontWeight: 700,
-                  fontSize: 'clamp(15px, 1.5vw, 17px)',
-                  color: '#ffffff',
-                  letterSpacing: '-0.3px',
-                  marginBottom: '10px',
-                  lineHeight: 1.3,
-                }}
-              >
-                {problem.title}
-              </div>
-              <div
-                style={{
-                  fontSize: 'clamp(13px, 1.2vw, 14px)',
-                  color: '#6b7280',
-                  lineHeight: 1.65,
-                }}
-              >
-                {problem.desc}
-              </div>
-            </div>
-          ))}
+              Discover{' '}
+              <span className="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
         </div>
       </div>
-
-      <style>{`
-        @media (max-width: 900px) {
-          .problems-grid {
-            grid-template-columns: repeat(2, 1fr) !important;
-          }
-        }
-        @media (max-width: 560px) {
-          .problems-grid {
-            grid-template-columns: 1fr !important;
-          }
-        }
-      `}</style>
     </section>
   );
 }

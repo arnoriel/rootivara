@@ -43,7 +43,7 @@ export default function FloatingWhatsApp() {
         </svg>
       </a>
 
-      {/* Ripple ping effect */}
+      {/* Ripple ping */}
       <style>{`
         .wa-float::before {
           content: '';

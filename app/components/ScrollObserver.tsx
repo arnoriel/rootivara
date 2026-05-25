@@ -12,16 +12,10 @@ export default function ScrollObserver() {
           }
         });
       },
-      {
-        threshold: 0.08,
-        rootMargin: '0px 0px -40px 0px',
-      }
+      { threshold: 0.12 }
     );
 
-    // Observe all reveal elements
-    const elements = document.querySelectorAll('.reveal');
-    elements.forEach((el) => observer.observe(el));
-
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
 

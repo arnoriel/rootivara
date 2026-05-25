@@ -4,11 +4,11 @@ import About from "./components/About";
 import Problems from "./components/Problems";
 import Solutions from "./components/Solutions";
 import Portfolio from "./components/Portfolio";
-import Testimonials from "./components/Testimonials";
 import Pricing from "./components/Pricing";
-import CTA from "./components/CTA";
-import FAQ from "./components/FAQ";
 import AskAI from "./components/AskAI";
+import Testimonials from "./components/Testimonials";
+import FAQ from "./components/FAQ";
+import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 import ScrollObserver from "./components/ScrollObserver";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
@@ -22,11 +22,11 @@ export default function Home() {
       <Problems />
       <Solutions />
       <Portfolio />
-      <Testimonials />
       <Pricing />
-      <CTA />
-      <FAQ />
       <AskAI />
+      <Testimonials />
+      <FAQ />
+      <CTA />
       <Footer />
       <ScrollObserver />
       <FloatingWhatsApp />

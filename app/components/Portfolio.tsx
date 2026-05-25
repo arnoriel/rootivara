@@ -1,324 +1,100 @@
-'use client';
-
-import { useEffect, useRef, useState } from 'react';
-
-const projects = [
-  {
-    url: 'https://thesunnahmarketing.com',
-    title: 'The Sunnah Marketing',
-    category: 'Marketing / E-Commerce',
-  },
-  {
-    url: 'https://ai.cuanclip.com',
-    title: 'CuanClip AI',
-    category: 'SaaS / AI Tools',
-  },
-  {
-    url: 'https://flowfree.my.id',
-    title: 'FlowFree',
-    category: 'SaaS / Productivity',
-  },
-  {
-    url: 'https://derevuelo.vercel.app',
-    title: 'De Revuelo',
-    category: 'Landing Page',
-  },
-  {
-    url: 'https://benvenuto-beta.vercel.app',
-    title: 'Benvenuto',
-    category: 'Web App',
-  },
-  {
-    url: 'https://iron-clad-two.vercel.app',
-    title: 'Iron Clad',
-    category: 'Web App',
-  },
-  {
-    url: 'https://rentalmobil-kappa.vercel.app',
-    title: 'Rental Mobil',
-    category: 'Web App',
-  },
-  {
-    url: 'https://outdoor-job.vercel.app',
-    title: 'Outdoor Job',
-    category: 'Web App',
-  },
-  {
-    url: 'https://partnerhaus.vercel.app',
-    title: 'Partner Haus',
-    category: 'Web App',
-  },
-];
-
-function PortfolioCard({
-  project,
-  index,
-}: {
-  project: (typeof projects)[0];
-  index: number;
-}) {
-  const [hovered, setHovered] = useState(false);
-
-  // Use screenshot service for reliable previews
-  const screenshotUrl = `https://api.microlink.io/?url=${encodeURIComponent(project.url)}&screenshot=true&meta=false&embed=screenshot.url`;
-
-  return (
-    <div
-      className={`reveal reveal-delay-${(index % 3) + 1}`}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      style={{
-        borderRadius: '16px',
-        overflow: 'hidden',
-        background: '#e8e4ff',
-        position: 'relative',
-        cursor: 'pointer',
-        transform: hovered ? 'translateY(-6px)' : 'translateY(0)',
-        transition: 'transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s ease',
-        boxShadow: hovered
-          ? '0 20px 50px rgba(124,106,255,0.25)'
-          : '0 2px 16px rgba(0,0,0,0.06)',
-        border: '1px solid rgba(196,185,245,0.4)',
-        aspectRatio: '16/11',
-      }}
-    >
-      {/* Screenshot preview */}
-      <img
-        src={screenshotUrl}
-        alt={project.title}
-        style={{
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          objectPosition: 'top',
-          display: 'block',
-          transition: 'transform 0.4s ease',
-          transform: hovered ? 'scale(1.04)' : 'scale(1)',
-        }}
-        onError={(e) => {
-          // Fallback to a gradient placeholder if screenshot fails
-          const parent = (e.target as HTMLImageElement).parentElement;
-          if (parent) {
-            (e.target as HTMLImageElement).style.display = 'none';
-          }
-        }}
-      />
-
-      {/* Gradient overlay */}
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          background: hovered
-            ? 'linear-gradient(to top, rgba(22,20,43,0.85) 0%, rgba(22,20,43,0.2) 50%, transparent 100%)'
-            : 'linear-gradient(to top, rgba(22,20,43,0.5) 0%, transparent 60%)',
-          transition: 'all 0.3s ease',
-        }}
-      />
-
-      {/* Fallback bg */}
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          background: `linear-gradient(135deg, 
-            hsl(${240 + index * 15}, 50%, 82%) 0%, 
-            hsl(${260 + index * 10}, 60%, 75%) 100%)`,
-          zIndex: -1,
-        }}
-      />
-
-      {/* Info overlay */}
-      <div
-        style={{
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          padding: '16px 18px',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '4px',
-        }}
-      >
-        <span
-          style={{
-            fontSize: '10px',
-            fontWeight: 600,
-            color: 'rgba(196,185,245,0.9)',
-            textTransform: 'uppercase',
-            letterSpacing: '0.8px',
-          }}
-        >
-          {project.category}
-        </span>
-        <span
-          style={{
-            fontSize: '14px',
-            fontWeight: 700,
-            color: '#ffffff',
-            letterSpacing: '-0.2px',
-          }}
-        >
-          {project.title}
-        </span>
-
-        {hovered && (
-          <a
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            style={{
-              marginTop: '8px',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '6px',
-              fontSize: '12px',
-              fontWeight: 600,
-              color: '#c4b9f5',
-              textDecoration: 'none',
-            }}
-          >
-            Kunjungi Website
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-              <path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </a>
-        )}
-      </div>
-    </div>
-  );
-}
-
 export default function Portfolio() {
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const projects = [
+    {
+      id: 1,
+      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBVqSD3SPKTMlmxjMHuXBelJ0jLWYPO6JlGyScdOs7_qt4do1wBo0XaQMR1V5KHNTozq_h2Y63FVCz14B2cJeGJ5yUuDiFJnT5SJSIQkLzaPbZCrI7QwVnl4D6gh4XoqNRv09RWa-Xb4gUK0ttN5Z_Uv3W-00fQlS6M_2I2JTU7Jmh0pe9f-LBJprQwZHyRV_7MnYai_WUES_R6v_pgfX3CVOyG-JERK_f0Qyvzbzvtn2EoKy0iddH4THZRZiX2RtJpDW3Zo4EbmpOW',
+      category: 'Interior Design',
+      title: 'Luminary Studio',
+      wide: true,
+    },
+    {
+      id: 2,
+      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDKY6u02X0JWH_r9V7fd9MJWGOG-ZQlnIQyOEpE6UJoe0RIMBvQc_JVv66R8hhSHFh4_ZmblSmpHmRgprmpPyLuJ11MaftCUIQMLHA27Oy1RyiQYJm-GUvXKE6xbJrjHwhWSEhAC2Pn46x7tvBv2K3NzHzCmp_NiZnBbapuS3GS3cMUjj-oKpnxC2NAQ_dJQxhjz2QBguExaUSnPm2IbQbHlV8mQuslhMyZoroui7CWKOsklanRpCGqr_lrQRhXX_eHKAphQz9gOFnj',
+      category: 'E-Commerce',
+      title: 'Botanica Rare',
+      wide: false,
+    },
+    {
+      id: 3,
+      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCMTPVSC-hwyO01dy_SeRvYvzSbBHTlpLhrx1ZfZntYZqrV0inL2TeudpO9FOXg1xovZrKxOs0iTfJ0IL9f4aGFHSDiieJFxXjQtoG6aC-ax-Z2hu_77_DgJVxPAuJt6n6sE_PUbeYjAkS-GILsaKq6rHz7xshAJ-Lw8KDEXbMKelqx0eBFeCD8_SGbk4qIye1ihPgg866rrePZqh30k1unQpWjc3ODulmQAj60CjQy_n5PnyCD2NKgcXIHtKy-x1mFFaBHNEvW7fg5',
+      category: 'Real Estate',
+      title: 'Skyline Ventures',
+      wide: false,
+    },
+  ];
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.querySelectorAll('.reveal').forEach((el) => {
-              el.classList.add('visible');
-            });
-          }
-        });
-      },
-      { threshold: 0.05 }
-    );
-
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
+  const waLink = `https://wa.me/62895605476149?text=${encodeURIComponent(
+    'Halo rootivara! Saya ingin melihat portfolio lengkap dan memulai proyek bersama kalian.'
+  )}`;
 
   return (
-    <section
-      id="portofolio"
-      ref={sectionRef}
-      style={{
-        padding: 'clamp(60px, 10vw, 120px) 24px',
-        background: '#ffffff',
-      }}
-    >
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        {/* Section label + heading */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '32px',
-            alignItems: 'flex-end',
-            marginBottom: 'clamp(40px, 6vw, 64px)',
-          }}
-          className="portfolio-header-grid"
+    <section id="portfolio" className="py-10 md:py-24 bg-[#00190d] text-white">
+      {/* Header */}
+      <div className="px-4 md:px-16 max-w-[1280px] mx-auto mb-6 md:mb-12 flex justify-between items-end reveal">
+        <div>
+          <span className="text-[10px] md:text-[11px] font-semibold text-[#e9c176] uppercase tracking-[0.3em] block mb-2 md:mb-4">
+            The Archive
+          </span>
+          <h2 className="text-[26px] md:text-[40px] font-semibold leading-tight tracking-[-0.02em]">
+            Selected Works
+          </h2>
+        </div>
+        <a
+          href={waLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:flex items-center gap-2 text-[11px] font-semibold text-[#e9c176] border border-[#e9c176]/30 px-6 py-3 rounded-full
+            hover:bg-[#e9c176] hover:text-[#00190d] transition-all uppercase tracking-[0.15em]"
         >
-          <div>
-            <div
-              className="reveal"
-              style={{
-                fontSize: '12px',
-                fontWeight: 600,
-                color: '#7c6aff',
-                letterSpacing: '1px',
-                textTransform: 'uppercase',
-                marginBottom: '12px',
-              }}
-            >
-              rootivara dalam Aksi
-            </div>
-            <h2
-              className="reveal reveal-delay-1"
-              style={{
-                fontSize: 'clamp(28px, 4.5vw, 52px)',
-                fontWeight: 800,
-                letterSpacing: '-1.5px',
-                lineHeight: 1.1,
-                color: '#0e0e0e',
-              }}
-            >
-              Portofolio
-            </h2>
-          </div>
+          View All Projects
+        </a>
+      </div>
 
-          <div
-            className="reveal reveal-delay-2"
-            style={{
-              fontSize: 'clamp(14px, 1.5vw, 16px)',
-              color: '#5a5a6a',
-              lineHeight: 1.7,
-              fontWeight: 400,
-            }}
-          >
-            rootivara menawarkan berbagai layanan untuk developers, bisnis, dan startup yang membutuhkan solusi digital yang aman, cepat, dan berperforma tinggi.{' '}
-            <a
-              href="https://wa.me/62895605476149?text=Halo%20rootivara%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20portofolio%20kalian."
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                color: '#7c6aff',
-                fontWeight: 600,
-                textDecoration: 'none',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '4px',
-              }}
-            >
-              Hubungi Kami
-            </a>
+      {/* Projects */}
+      <div className="flex flex-col gap-3 md:gap-8 px-4 md:px-16 max-w-[1280px] mx-auto">
+        {/* Wide project */}
+        <div className="group relative overflow-hidden rounded-2xl aspect-[16/9] md:aspect-[21/9] reveal reveal-delay-1">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={projects[0].img}
+            alt={projects[0].title}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#00190d]/80 to-transparent opacity-60" />
+          <div className="absolute bottom-5 left-5 right-5 md:bottom-10 md:left-10 md:right-10 flex justify-between items-end">
+            <div>
+              <span className="text-[#e9c176] text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.15em] mb-1 md:mb-2 block">
+                {projects[0].category}
+              </span>
+              <h3 className="text-xl md:text-[36px] font-semibold tracking-tight">{projects[0].title}</h3>
+            </div>
+            <span className="material-symbols-outlined text-2xl md:text-4xl hover:translate-x-1 hover:-translate-y-1 transition-transform cursor-pointer">
+              arrow_outward
+            </span>
           </div>
         </div>
 
-        {/* Portfolio Grid */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '16px',
-          }}
-          className="portfolio-grid"
-        >
-          {projects.map((project, i) => (
-            <PortfolioCard key={project.url} project={project} index={i} />
+        {/* 2-col projects */}
+        <div className="grid grid-cols-2 gap-3 md:gap-8">
+          {projects.slice(1).map((p, i) => (
+            <div key={p.id} className={`group relative overflow-hidden rounded-2xl aspect-square reveal reveal-delay-${i + 2}`}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={p.img}
+                alt={p.title}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
+              <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8">
+                <span className="text-white/60 text-[9px] md:text-[11px] font-semibold uppercase tracking-[0.15em] mb-1 md:mb-2 block">
+                  {p.category}
+                </span>
+                <h3 className="text-sm md:text-2xl font-medium">{p.title}</h3>
+              </div>
+            </div>
           ))}
         </div>
       </div>
-
-      <style>{`
-        @media (max-width: 900px) {
-          .portfolio-header-grid {
-            grid-template-columns: 1fr !important;
-          }
-          .portfolio-grid {
-            grid-template-columns: repeat(2, 1fr) !important;
-          }
-        }
-        @media (max-width: 540px) {
-          .portfolio-grid {
-            grid-template-columns: 1fr !important;
-          }
-        }
-      `}</style>
     </section>
   );
 }

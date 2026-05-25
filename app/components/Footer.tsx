@@ -1,142 +1,86 @@
-'use client';
-
 export default function Footer() {
-  const year = new Date().getFullYear();
-
   return (
-    <footer
-      style={{
-        background: '#0e0e0e',
-        color: '#ffffff',
-        padding: 'clamp(40px, 6vw, 64px) 24px clamp(24px, 4vw, 40px)',
-      }}
-    >
-      <div
-        style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-        }}
-      >
-        {/* Top row */}
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'flex-start',
-            gap: '40px',
-            marginBottom: '48px',
-            flexWrap: 'wrap',
-          }}
-        >
-          {/* Brand */}
-          <div style={{ maxWidth: '280px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '14px' }}>
-              {/* <div
-                style={{
-                  width: '28px',
-                  height: '28px',
-                  background: 'linear-gradient(135deg, #7c6aff, #a855f7)',
-                  borderRadius: '8px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 8 L8 3 L13 8 L8 13 Z" fill="white" opacity="0.9"/>
-                  <circle cx="8" cy="8" r="2.5" fill="white"/>
-                </svg>
-              </div> */}
-              <span style={{ fontWeight: 700, fontSize: '18px', letterSpacing: '-0.3px' }}>rootivara</span>
-            </div>
-            <p style={{ fontSize: '13px', color: '#6b7280', lineHeight: 1.7, fontWeight: 400 }}>
-              Studio software development yang membantu bisnis & startup mewujudkan ide digital menjadi produk nyata.
-            </p>
-          </div>
-
-          {/* Links */}
-          <div style={{ display: 'flex', gap: 'clamp(32px, 5vw, 72px)', flexWrap: 'wrap' }}>
-            <div>
-              <div style={{ fontSize: '12px', fontWeight: 700, color: '#9ca3af', letterSpacing: '0.8px', textTransform: 'uppercase', marginBottom: '14px' }}>
-                Layanan
-              </div>
-              {['Website Professional', 'Pembuatan SaaS', 'Mobile App', 'Desktop App'].map((item) => (
-                <div key={item} style={{ fontSize: '14px', color: '#6b7280', marginBottom: '10px', fontWeight: 400 }}>
-                  {item}
-                </div>
-              ))}
-            </div>
-
-            <div>
-              <div style={{ fontSize: '12px', fontWeight: 700, color: '#9ca3af', letterSpacing: '0.8px', textTransform: 'uppercase', marginBottom: '14px' }}>
-                Navigasi
-              </div>
-              {[
-                { label: 'Tentang Kami', href: '#layanan' },
-                { label: 'Portofolio', href: '#portofolio' },
-                { label: 'Paket Harga', href: '#paket' },
-                { label: 'Kontak', href: '#kontak' },
-              ].map((item) => (
-                <div key={item.label} style={{ fontSize: '14px', color: '#6b7280', marginBottom: '10px', fontWeight: 400 }}>
-                  <a
-                    href={item.href}
-                    style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s' }}
-                    onMouseEnter={(e) => { (e.target as HTMLElement).style.color = '#c4b9f5'; }}
-                    onMouseLeave={(e) => { (e.target as HTMLElement).style.color = '#6b7280'; }}
-                  >
-                    {item.label}
-                  </a>
-                </div>
-              ))}
-            </div>
-
-            <div>
-              <div style={{ fontSize: '12px', fontWeight: 700, color: '#9ca3af', letterSpacing: '0.8px', textTransform: 'uppercase', marginBottom: '14px' }}>
-                Kontak
-              </div>
-              <a
-                href="https://wa.me/62895605476149"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  fontSize: '14px',
-                  color: '#25D366',
-                  textDecoration: 'none',
-                  fontWeight: 500,
-                  marginBottom: '10px',
-                }}
-              >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                </svg>
-                +62 895-6054-76149
-              </a>
-            </div>
-          </div>
+    <footer className="bg-[#fbf9f4] border-t border-[#c1c8c2]/30 py-10 md:py-20">
+      <div className="px-4 md:px-16 max-w-[1280px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-7 md:gap-8">
+        {/* Brand */}
+        <div className="col-span-2 md:col-span-1">
+          <div className="text-[18px] md:text-[22px] font-bold tracking-tight text-[#00190d] mb-3 md:mb-4">Rootivara</div>
+          <p className="text-xs md:text-sm text-[#414843] leading-relaxed max-w-xs mb-4 md:mb-6">
+            Crafting organic digital experiences for the world&apos;s most discerning brands.
+          </p>
         </div>
 
-        {/* Divider */}
-        <div style={{ height: '1px', background: 'rgba(255,255,255,0.08)', marginBottom: '24px' }} />
+        {/* Connect */}
+        <div>
+          <h4 className="text-[10px] md:text-[11px] font-bold text-[#00190d] uppercase tracking-[0.15em] mb-4 md:mb-6">Connect</h4>
+          <ul className="space-y-3 md:space-y-4">
+            {['Instagram', 'LinkedIn', 'Behance'].map((s) => (
+              <li key={s}>
+                <a
+                  href="#"
+                  className="text-[10px] md:text-[11px] font-semibold text-[#414843] hover:text-[#775a19] transition-all uppercase tracking-[0.1em] flex items-center gap-2 group"
+                >
+                  <span className="w-2 h-px bg-[#775a19] opacity-0 group-hover:opacity-100 transition-all" />
+                  {s}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-        {/* Bottom row */}
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            gap: '16px',
-            flexWrap: 'wrap',
-          }}
-        >
-          <div style={{ fontSize: '13px', color: '#4b5563', fontWeight: 400 }}>
-            © {year} rootivara. Semua hak dilindungi.
-          </div>
-          <div style={{ fontSize: '13px', color: '#4b5563', fontWeight: 400 }}>
-            Dibuat dengan ♥ oleh tim rootivara
-          </div>
+        {/* Navigation */}
+        <div>
+          <h4 className="text-[10px] md:text-[11px] font-bold text-[#00190d] uppercase tracking-[0.15em] mb-4 md:mb-6">Navigation</h4>
+          <ul className="space-y-3 md:space-y-4">
+            {[
+              { label: 'Services', href: '#services' },
+              { label: 'Portfolio', href: '#portfolio' },
+              { label: 'Process', href: '#process' },
+            ].map((link) => (
+              <li key={link.label}>
+                <a
+                  href={link.href}
+                  className="text-[10px] md:text-[11px] font-semibold text-[#414843] hover:text-[#775a19] transition-colors uppercase tracking-[0.1em]"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Studio */}
+        <div>
+          <h4 className="text-[10px] md:text-[11px] font-bold text-[#00190d] uppercase tracking-[0.15em] mb-4 md:mb-6">Studio</h4>
+          <p className="text-[10px] md:text-[11px] font-semibold text-[#414843] uppercase tracking-[0.1em] mb-3 md:mb-4">
+            hello@rootivara.com
+          </p>
+          <a
+            href={`https://wa.me/62895605476149?text=${encodeURIComponent('Halo rootivara!')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[10px] md:text-[11px] font-semibold text-[#775a19] uppercase tracking-[0.1em] hover:text-[#00190d] transition-colors"
+          >
+            +62 895-6054-76149
+          </a>
+        </div>
+      </div>
+
+      {/* Bottom bar */}
+      <div className="px-4 md:px-16 max-w-[1280px] mx-auto mt-8 md:mt-12 pt-6 md:pt-8 border-t border-[#c1c8c2]/10 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
+        <span className="text-[10px] md:text-[11px] text-[#414843] opacity-50 uppercase tracking-[0.1em]">
+          © 2025 Rootivara Digital Studio. Organic Excellence.
+        </span>
+        <div className="flex gap-6 md:gap-8">
+          {['Privacy', 'Terms'].map((l) => (
+            <a
+              key={l}
+              href="#"
+              className="text-[10px] md:text-[11px] text-[#414843] opacity-50 hover:opacity-100 transition-opacity uppercase tracking-[0.1em]"
+            >
+              {l}
+            </a>
+          ))}
         </div>
       </div>
     </footer>

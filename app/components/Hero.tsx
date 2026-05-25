@@ -1,354 +1,74 @@
 'use client';
 
 export default function Hero() {
-  const handleScroll = (href: string) => {
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
+  const waLink = `https://wa.me/62895605476149?text=${encodeURIComponent(
+    'Halo rootivara! Saya ingin konsultasi dan mulai proyek digital bersama kalian.'
+  )}`;
 
   return (
-    <section
-      style={{
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingBottom: '0',
-        position: 'relative',
-        overflow: 'hidden',
-        paddingTop: 0,
-      }}
-    >
-      {/* Background subtle gradient */}
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          background: 'radial-gradient(ellipse 90% 70% at 50% 30%, rgba(196,185,245,0.3) 0%, rgba(124,106,255,0.08) 50%, transparent 80%)',
-          zIndex: 0,
-        }}
-      />
-
-      {/* Decorative orbs */}
-      <div
-        className="float-anim"
-        style={{
-          position: 'absolute',
-          top: '18%',
-          left: '8%',
-          width: '160px',
-          height: '160px',
-          background: 'radial-gradient(circle, rgba(124,106,255,0.25) 0%, transparent 70%)',
-          borderRadius: '50%',
-          filter: 'blur(30px)',
-          zIndex: 0,
-        }}
-      />
-      <div
-        className="float-anim-delay"
-        style={{
-          position: 'absolute',
-          top: '20%',
-          right: '10%',
-          width: '200px',
-          height: '200px',
-          background: 'radial-gradient(circle, rgba(168,85,247,0.2) 0%, transparent 70%)',
-          borderRadius: '50%',
-          filter: 'blur(40px)',
-          zIndex: 0,
-        }}
-      />
-
-      {/* Hero text content */}
-      <div
-        style={{
-          position: 'relative',
-          zIndex: 1,
-          textAlign: 'center',
-          padding: '0 24px',
-          maxWidth: '800px',
-          width: '100%',
-          paddingTop: 'clamp(80px, 12vw, 140px)',
-        }}
-      >
-        {/* Badge */}
-        <div
-          className="hero-entrance"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '6px',
-            background: 'rgba(124,106,255,0.1)',
-            border: '1px solid rgba(124,106,255,0.25)',
-            borderRadius: '100px',
-            padding: '6px 14px',
-            marginBottom: '28px',
-            fontSize: '13px',
-            fontWeight: 500,
-            color: '#7c6aff',
-            letterSpacing: '0.2px',
-          }}
-        >
-          Software Development Studio
+    <section className="min-h-screen pt-20 pb-8 md:pt-32 md:pb-16 flex items-center px-4 md:px-16 max-w-[1280px] mx-auto">
+      <div className="grid grid-cols-12 w-full items-center gap-4 md:gap-8">
+        {/* Left — copy */}
+        <div className="col-span-12 md:col-span-7">
+          <span className="text-[10px] md:text-[11px] font-semibold text-[#775a19] uppercase tracking-[0.3em] block mb-3 md:mb-6 hero-entrance">
+            Digital Craftsmanship
+          </span>
+          <h1 className="text-[34px] md:text-[72px] font-bold leading-[1.05] tracking-[-0.04em] text-[#00190d] mb-3 md:mb-6 hero-entrance hero-entrance-delay-1">
+            Websites Designed to{' '}
+            <br />
+            <em className="font-light not-italic" style={{ fontStyle: 'italic', fontWeight: 300 }}>
+              Elevate
+            </em>{' '}
+            Modern Brands.
+          </h1>
+          <p className="text-sm md:text-lg text-[#414843] leading-relaxed max-w-xl mb-6 md:mb-10 hero-entrance hero-entrance-delay-2">
+            We blend architectural precision with organic aesthetics to build digital environments
+            that command attention and drive growth.
+          </p>
+          <div className="flex flex-wrap gap-4 md:gap-6 items-center hero-entrance hero-entrance-delay-3">
+            <a
+              href="#portfolio"
+              className="bg-[#00190d] text-white px-7 py-3 md:px-10 md:py-4 rounded-lg text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.15em]
+                hover:bg-[#0a2f1f] transition-all duration-300 active:scale-95"
+            >
+              View Portfolio
+            </a>
+            <a
+              href="#process"
+              className="text-[10px] md:text-[11px] font-semibold text-[#00190d] uppercase tracking-[0.15em] border-b border-[#775a19] pb-1
+                hover:text-[#775a19] transition-colors duration-200"
+            >
+              Explore Our Process
+            </a>
+          </div>
         </div>
 
-        {/* Heading */}
-        <h1
-          className="hero-entrance hero-entrance-delay-1"
-          style={{
-            fontFamily: 'Plus Jakarta Sans, sans-serif',
-            fontWeight: 800,
-            fontSize: 'clamp(36px, 7vw, 72px)',
-            lineHeight: 1.1,
-            letterSpacing: '-2px',
-            color: '#0e0e0e',
-            marginBottom: '20px',
-          }}
-        >
-          Di Sini, Ide{' '}
-          <span
-            style={{
-              background: 'linear-gradient(135deg, #7c6aff 0%, #a855f7 60%, #c084fc 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}
-          >
-            Tumbuh
-          </span>{' '}
-          Jadi Produk
-        </h1>
-
-        {/* Subtitle */}
-        <p
-          className="hero-entrance hero-entrance-delay-2"
-          style={{
-            fontFamily: 'Plus Jakarta Sans, sans-serif',
-            fontSize: 'clamp(15px, 2vw, 18px)',
-            fontWeight: 400,
-            color: '#5a5a6a',
-            lineHeight: 1.7,
-            marginBottom: '36px',
-            maxWidth: '520px',
-            margin: '0 auto 36px',
-          }}
-        >
-          Kami membangun Website, SaaS, Desktop & Mobile App yang scalable, modern, dan siap bersaing di era digital. Dari konsep hingga live — rootivara hadir untuk Anda.
-        </p>
-
-        {/* CTAs */}
-        <div
-          className="hero-entrance hero-entrance-delay-3"
-          style={{
-            display: 'flex',
-            gap: '12px',
-            justifyContent: 'center',
-            flexWrap: 'wrap',
-            marginBottom: '60px',
-          }}
-        >
-          <a
-            href="https://wa.me/62895605476149?text=Halo%20rootivara%2C%20saya%20ingin%20konsultasi%20dan%20mulai%20proyek%20bersama%20kalian."
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              background: '#0e0e0e',
-              color: '#ffffff',
-              fontFamily: 'Plus Jakarta Sans, sans-serif',
-              fontWeight: 600,
-              fontSize: '15px',
-              padding: '14px 28px',
-              borderRadius: '100px',
-              textDecoration: 'none',
-              transition: 'all 0.25s ease',
-              display: 'inline-block',
-              letterSpacing: '-0.2px',
-            }}
-            onMouseEnter={(e) => {
-              (e.target as HTMLElement).style.background = '#7c6aff';
-              (e.target as HTMLElement).style.transform = 'translateY(-2px)';
-              (e.target as HTMLElement).style.boxShadow = '0 8px 25px rgba(124,106,255,0.35)';
-            }}
-            onMouseLeave={(e) => {
-              (e.target as HTMLElement).style.background = '#0e0e0e';
-              (e.target as HTMLElement).style.transform = 'translateY(0)';
-              (e.target as HTMLElement).style.boxShadow = 'none';
-            }}
-          >
-            Mulai Sekarang
-          </a>
-          <button
-            onClick={() => handleScroll('#portofolio')}
-            style={{
-              background: 'transparent',
-              color: '#0e0e0e',
-              fontFamily: 'Plus Jakarta Sans, sans-serif',
-              fontWeight: 600,
-              fontSize: '15px',
-              padding: '14px 28px',
-              borderRadius: '100px',
-              border: '1.5px solid rgba(14,14,14,0.2)',
-              cursor: 'pointer',
-              transition: 'all 0.25s ease',
-              letterSpacing: '-0.2px',
-            }}
-            onMouseEnter={(e) => {
-              (e.target as HTMLElement).style.borderColor = '#7c6aff';
-              (e.target as HTMLElement).style.color = '#7c6aff';
-            }}
-            onMouseLeave={(e) => {
-              (e.target as HTMLElement).style.borderColor = 'rgba(14,14,14,0.2)';
-              (e.target as HTMLElement).style.color = '#0e0e0e';
-            }}
-          >
-            Lihat Portofolio
-          </button>
-        </div>
-      </div>
-
-      {/* Hero Visual - the garden/scene card mimicking the BloomFi style */}
-      <div
-        style={{
-          position: 'relative',
-          zIndex: 1,
-          width: '100%',
-          maxWidth: '1100px',
-          margin: '0 auto',
-          padding: '0 24px',
-        }}
-      >
-        <div
-          style={{
-            background: 'linear-gradient(160deg, #e8e2ff 0%, #d4c8ff 30%, #c4b5f8 60%, #b8a8f5 100%)',
-            borderRadius: '24px 24px 0 0',
-            height: 'clamp(260px, 35vw, 420px)',
-            position: 'relative',
-            overflow: 'hidden',
-            boxShadow: '0 -8px 60px rgba(124,106,255,0.2), 0 0 0 1px rgba(196,185,245,0.4)',
-          }}
-        >
-          {/* Floating tech cards inside hero visual */}
-          <div
-            className="float-anim hero-float-card"
-            style={{
-              position: 'absolute',
-              top: '30px',
-              left: '40px',
-              background: 'rgba(255,255,255,0.85)',
-              backdropFilter: 'blur(12px)',
-              borderRadius: '16px',
-              padding: '16px 20px',
-              boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
-              minWidth: '150px',
-            }}
-          >
-            <div style={{ fontSize: '11px', color: '#7c6aff', fontWeight: 600, marginBottom: '6px', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Website</div>
-            <div style={{ fontSize: '20px', fontWeight: 800, color: '#0e0e0e', letterSpacing: '-0.5px' }}>✓ Live</div>
-            <div style={{ fontSize: '12px', color: '#6b7280', marginTop: '4px' }}>dengan Maintenance safety</div>
+        {/* Right — editorial image (hidden on smallest screens, shown from sm up) */}
+        <div className="col-span-12 md:col-span-5 relative mt-6 md:mt-0 hero-entrance hero-entrance-delay-4 hidden sm:block">
+          <div className="aspect-[4/3] md:aspect-[4/5] bg-[#f0eee9] rounded-2xl overflow-hidden editorial-shadow relative z-10">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-UO5kNwys1Q9IvsOm38QWUioqYPYHQplmk6JRliH_DUwV2CLdFchOQerCtnBCUK7AVMhw9bY1a9DUKCmEoLSMovv_Mx2ppTa2OuZQTPnaXLGoWhT83q7TxqEBl-WNounILB7dJuy9yl65MppIDp3VOGibLD15JEBiI3a6dwaLig3D4oLCf08q2t3UYq3xUs-ujdKV8hO3jMKexxFgdZuI9qugvtDllc55jiTUQKMnPEWjMRzkw9HTQrmSzh72SPM2lOLKXi5tXCfo"
+              alt="Premium architectural office interior"
+              className="w-full h-full object-cover"
+            />
           </div>
 
-          <div
-            className="float-anim-delay hero-float-card"
-            style={{
-              position: 'absolute',
-              top: '30px',
-              right: '40px',
-              background: 'rgba(22,20,43,0.9)',
-              backdropFilter: 'blur(12px)',
-              borderRadius: '16px',
-              padding: '16px 20px',
-              boxShadow: '0 4px 20px rgba(0,0,0,0.25)',
-              minWidth: '160px',
-            }}
-          >
-            <div style={{ fontSize: '11px', color: '#c4b9f5', fontWeight: 600, marginBottom: '6px', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Klien Puas</div>
-            <div style={{ fontSize: '24px', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.5px' }}>98%</div>
-            <div style={{ fontSize: '12px', color: '#9ca3af', marginTop: '4px' }}>rating kepuasan</div>
-          </div>
-
-          {/* Center large abstract shape */}
-          <div
-            style={{
-              position: 'absolute',
-              bottom: '-40px',
-              left: '50%',
-              transform: 'translateX(-50%)',
-              width: '320px',
-              height: '320px',
-              background: 'radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(196,185,245,0.3) 40%, transparent 70%)',
-              borderRadius: '50%',
-              filter: 'blur(20px)',
-            }}
-          />
-
-          {/* Decorative coin-like elements */}
-          <div
-            className="float-anim"
-            style={{
-              position: 'absolute',
-              bottom: '30px',
-              left: '20%',
-              width: '80px',
-              height: '80px',
-              background: 'linear-gradient(135deg, rgba(255,255,255,0.7), rgba(196,185,245,0.6))',
-              borderRadius: '50%',
-              boxShadow: '0 8px 32px rgba(124,106,255,0.3), inset 0 2px 8px rgba(255,255,255,0.5)',
-              border: '1px solid rgba(255,255,255,0.6)',
-            }}
-          />
-          <div
-            className="float-anim-delay"
-            style={{
-              position: 'absolute',
-              bottom: '20px',
-              right: '22%',
-              width: '100px',
-              height: '100px',
-              background: 'linear-gradient(135deg, rgba(255,255,255,0.5), rgba(196,185,245,0.4))',
-              borderRadius: '50%',
-              boxShadow: '0 8px 32px rgba(124,106,255,0.25), inset 0 2px 8px rgba(255,255,255,0.4)',
-              border: '1px solid rgba(255,255,255,0.5)',
-            }}
-          />
-
-          {/* Bottom stat bar */}
-          <div
-            style={{
-              position: 'absolute',
-              bottom: 0,
-              left: 0,
-              right: 0,
-              background: 'rgba(255,255,255,0.3)',
-              backdropFilter: 'blur(10px)',
-              padding: '14px 30px',
-              display: 'flex',
-              gap: '40px',
-              justifyContent: 'center',
-              borderTop: '1px solid rgba(255,255,255,0.4)',
-            }}
-          >
-            {[
-              { label: 'Proyek Selesai', value: '50+' },
-              { label: 'Teknologi', value: '15+' },
-              { label: 'Tahun Pengalaman', value: '5+' },
-            ].map((stat) => (
-              <div key={stat.label} style={{ textAlign: 'center' }}>
-                <div style={{ fontSize: 'clamp(16px, 3vw, 22px)', fontWeight: 800, color: '#0e0e0e', letterSpacing: '-0.5px' }}>{stat.value}</div>
-                <div style={{ fontSize: '11px', color: '#4a4a6a', fontWeight: 500 }}>{stat.label}</div>
-              </div>
-            ))}
+          {/* Floating mock card */}
+          <div className="absolute -bottom-10 -left-20 w-64 h-72 bg-white p-5 rounded-xl editorial-shadow z-20 hidden lg:block border border-[#c1c8c2]/30">
+            <div className="w-full h-36 bg-[#f0eee9] mb-4 rounded-lg overflow-hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUn1X6cSQ0T0gyK4MWPt_fknidxcKZN7JFJmLcPH5-83nAvL2q7QxqC99uCoSPzrRTNcUHA6tLXqruVIv23pSEndExB2dFyWyLak4oQ_h02yEF3ZYQ0w21BuSaOQJvvuX32yUv7_1Ux-G5RSJcAtR6KfRsXd1KWt4PapEPrd4qXOwjtJNGnsDmQK4SOhvQwKIbmuubE_QcMY-tqchhBxqVOt0rjANuEH064nCR4ZISqvkbE9-Zo8BEvKIfFQynhhSijKlaz1z1dWcU"
+                alt="Analytics dashboard"
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
+            <div className="h-2 w-3/4 bg-[#c1c8c2] rounded mb-2" />
+            <div className="h-2 w-1/2 bg-[#c1c8c2] rounded" />
           </div>
         </div>
       </div>
-
-      <style>{`
-        @media (max-width: 640px) {
-          .hero-float-card {
-            display: none !important;
-          }
-        }
-      `}</style>
     </section>
   );
 }

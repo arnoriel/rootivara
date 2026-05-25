@@ -2,22 +2,27 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "rootivara — Studio Pembuatan Website, SaaS & Aplikasi",
+  title: "Rootivara | Organic Excellence in Digital Design",
   description:
-    "rootivara adalah studio software development profesional yang membantu bisnis & startup membangun Website, SaaS, Desktop & Mobile App yang modern, scalable, dan siap bersaing.",
+    "Rootivara adalah studio digital craftsmanship yang membangun website, landing page, dan ekosistem digital berkualitas premium untuk brand modern.",
   keywords: [
-    "pembuatan website",
+    "pembuatan website premium",
     "jasa website profesional",
-    "pembuatan aplikasi",
-    "SaaS development",
-    "mobile app",
-    "software development indonesia",
+    "web development indonesia",
+    "landing page berkualitas",
+    "digital studio",
     "rootivara",
+    "organic digital design",
   ],
+  icons: {
+    icon: "/favlogo.png",
+    shortcut: "/favlogo.png",
+    apple: "/favlogo.png",
+  },
   openGraph: {
-    title: "rootivara — Studio Pembuatan Website, SaaS & Aplikasi",
+    title: "Rootivara | Organic Excellence in Digital Design",
     description:
-      "rootivara adalah studio software development profesional. Dari Website hingga Mobile App — kami wujudkan ide Anda.",
+      "Studio digital craftsmanship — kami membangun website dan platform digital premium yang mengangkat brand Anda.",
     type: "website",
   },
 };
@@ -28,12 +33,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id">
+    <html lang="id" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Geist:wght@100;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
         />
       </head>
