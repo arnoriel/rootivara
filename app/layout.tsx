@@ -4,25 +4,34 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://rootivara.com"),
 
-  title: "Rootivara | Organic Excellence in Digital Design",
+  title: "Rootivara | Jasa Website Premium, SEO-Ready & Berbasis Konversi",
   description:
-    "Rootivara adalah studio digital craftsmanship yang membangun website, landing page, dan ekosistem digital berkualitas premium untuk brand modern.",
+    "Rootivara membantu UMKM, bisnis jasa, klinik, dan brand lokal memiliki website cepat, premium, SEO-ready, dan siap menghasilkan leads. Konsultasi gratis.",
   keywords: [
-    "pembuatan website premium",
+    "jasa pembuatan website",
     "jasa website profesional",
     "web development indonesia",
-    "landing page berkualitas",
-    "digital studio",
+    "website UMKM",
+    "website klinik",
+    "landing page iklan",
+    "SEO website",
     "rootivara",
-    "organic digital design",
+    "website bisnis premium",
+    "jasa website murah berkualitas",
   ],
+
+  // Favicon — letakkan file favicon.ico di folder /app (Next.js App Router akan otomatis mendeteksinya)
+  // Untuk Google Search, pastikan favlogo.png berukuran minimal 48x48px dan bisa diakses publik
   icons: {
-    icon: "/favlogo.png",
-    shortcut: "/favlogo.png",
-    apple: "/favlogo.png",
+    icon: [
+      { url: "/favlogo.png", sizes: "48x48", type: "image/png" },
+      { url: "/favlogo.png", sizes: "32x32", type: "image/png" },
+      { url: "/favlogo.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [{ url: "/favlogo.png", sizes: "180x180", type: "image/png" }],
+    shortcut: [{ url: "/favlogo.png", type: "image/png" }],
   },
 
-  // ✅ Canonical URL
   alternates: {
     canonical: "https://rootivara.com",
   },
@@ -31,28 +40,28 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Rootivara | Organic Excellence in Digital Design",
+    title: "Rootivara | Jasa Website Premium, SEO-Ready & Berbasis Konversi",
     description:
-      "Studio digital craftsmanship — kami membangun website dan platform digital premium yang mengangkat brand Anda.",
+      "Kami membantu bisnis tampil profesional secara online dengan website cepat, SEO-ready, dan fokus menghasilkan leads.",
     url: "https://rootivara.com",
     siteName: "Rootivara",
     type: "website",
     images: [
       {
-        url: "/favlogo.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Rootivara - Organic Excellence in Digital Design",
+        alt: "Rootivara - Jasa Website Premium untuk Bisnis Indonesia",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Rootivara | Organic Excellence in Digital Design",
+    title: "Rootivara | Jasa Website Premium, SEO-Ready & Berbasis Konversi",
     description:
-      "Studio digital craftsmanship — kami membangun website dan platform digital premium yang mengangkat brand Anda.",
-    images: ["/favlogo.png"],
+      "Kami membantu bisnis tampil profesional secara online dengan website cepat, SEO-ready, dan fokus menghasilkan leads.",
+    images: ["/og-image.png"],
   },
 };
 
@@ -74,6 +83,12 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
         />
+        {/* Favicon fallback explicit tags — penting agar Google Search bisa mendeteksi */}
+        <link rel="icon" type="image/png" sizes="48x48" href="/favlogo.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favlogo.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favlogo.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favlogo.png" />
+        <link rel="shortcut icon" href="/favlogo.png" />
       </head>
       <body>{children}</body>
     </html>

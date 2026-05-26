@@ -3,10 +3,11 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Problems from "./components/Problems";
 import Solutions from "./components/Solutions";
+import Services from "./components/Services";
+import Process from "./components/Process";
 import Portfolio from "./components/Portfolio";
-import Pricing from "./components/Pricing";
-import AskAI from "./components/AskAI";
 import Testimonials from "./components/Testimonials";
+import Pricing from "./components/Pricing";
 import FAQ from "./components/FAQ";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
@@ -21,10 +22,11 @@ export default function Home() {
       <About />
       <Problems />
       <Solutions />
+      <Services />
+      <Process />
       <Portfolio />
-      <Pricing />
-      <AskAI />
       <Testimonials />
+      <Pricing />
       <FAQ />
       <CTA />
       <Footer />

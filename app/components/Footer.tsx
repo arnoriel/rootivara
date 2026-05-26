@@ -1,26 +1,49 @@
 export default function Footer() {
+  const waLink = `https://wa.me/62895605476149?text=${encodeURIComponent(
+    'Halo rootivara! Saya ingin konsultasi website bisnis saya.'
+  )}`;
+
   return (
     <footer className="bg-[#fbf9f4] border-t border-[#c1c8c2]/30 py-10 md:py-20">
       <div className="px-4 md:px-16 max-w-[1280px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-7 md:gap-8">
         {/* Brand */}
         <div className="col-span-2 md:col-span-1">
-          <div className="text-[18px] md:text-[22px] font-bold tracking-tight text-[#00190d] mb-3 md:mb-4">Rootivara</div>
+          <div className="text-[18px] md:text-[22px] font-bold tracking-tight text-[#00190d] mb-3 md:mb-4">
+            Rootivara
+          </div>
           <p className="text-xs md:text-sm text-[#414843] leading-relaxed max-w-xs mb-4 md:mb-6">
-            Crafting organic digital experiences for the world&apos;s most discerning brands.
+            Membantu bisnis tampil profesional online dengan website cepat, SEO-ready, dan siap menghasilkan leads.
           </p>
+          <a
+            href={waLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 bg-[#00190d] text-white text-[10px] font-semibold uppercase tracking-[0.12em] px-4 py-2 rounded-full hover:bg-[#0a2f1f] transition-colors"
+          >
+            <span className="material-symbols-outlined text-sm">chat</span>
+            Konsultasi Gratis
+          </a>
         </div>
 
-        {/* Connect */}
+        {/* Layanan */}
         <div>
-          <h4 className="text-[10px] md:text-[11px] font-bold text-[#00190d] uppercase tracking-[0.15em] mb-4 md:mb-6">Connect</h4>
+          <h4 className="text-[10px] md:text-[11px] font-bold text-[#00190d] uppercase tracking-[0.15em] mb-4 md:mb-6">
+            Layanan
+          </h4>
           <ul className="space-y-3 md:space-y-4">
-            {['Instagram', 'LinkedIn', 'Behance'].map((s) => (
+            {[
+              'Website Company Profile',
+              'Website SEO Bisnis',
+              'Landing Page Ads',
+              'Website Klinik',
+              'Website UMKM',
+              'Maintenance Website',
+            ].map((s) => (
               <li key={s}>
                 <a
-                  href="#"
-                  className="text-[10px] md:text-[11px] font-semibold text-[#414843] hover:text-[#775a19] transition-all uppercase tracking-[0.1em] flex items-center gap-2 group"
+                  href="#services"
+                  className="text-[10px] md:text-[11px] font-semibold text-[#414843] hover:text-[#775a19] transition-colors uppercase tracking-[0.1em]"
                 >
-                  <span className="w-2 h-px bg-[#775a19] opacity-0 group-hover:opacity-100 transition-all" />
                   {s}
                 </a>
               </li>
@@ -28,14 +51,17 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Navigation */}
+        {/* Navigasi */}
         <div>
-          <h4 className="text-[10px] md:text-[11px] font-bold text-[#00190d] uppercase tracking-[0.15em] mb-4 md:mb-6">Navigation</h4>
+          <h4 className="text-[10px] md:text-[11px] font-bold text-[#00190d] uppercase tracking-[0.15em] mb-4 md:mb-6">
+            Navigasi
+          </h4>
           <ul className="space-y-3 md:space-y-4">
             {[
-              { label: 'Services', href: '#services' },
               { label: 'Portfolio', href: '#portfolio' },
-              { label: 'Process', href: '#process' },
+              { label: 'Cara Kerja', href: '#process' },
+              { label: 'Harga', href: '#pricing' },
+              { label: 'FAQ', href: '#faq' },
             ].map((link) => (
               <li key={link.label}>
                 <a
@@ -49,27 +75,40 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Studio */}
+        {/* Kontak */}
         <div>
-          <h4 className="text-[10px] md:text-[11px] font-bold text-[#00190d] uppercase tracking-[0.15em] mb-4 md:mb-6">Studio</h4>
+          <h4 className="text-[10px] md:text-[11px] font-bold text-[#00190d] uppercase tracking-[0.15em] mb-4 md:mb-6">
+            Kontak
+          </h4>
           <p className="text-[10px] md:text-[11px] font-semibold text-[#414843] uppercase tracking-[0.1em] mb-3 md:mb-4">
             hello@rootivara.com
           </p>
           <a
-            href={`https://wa.me/62895605476149?text=${encodeURIComponent('Halo rootivara!')}`}
+            href={waLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[10px] md:text-[11px] font-semibold text-[#775a19] uppercase tracking-[0.1em] hover:text-[#00190d] transition-colors"
+            className="text-[10px] md:text-[11px] font-semibold text-[#775a19] uppercase tracking-[0.1em] hover:text-[#00190d] transition-colors block mb-4"
           >
             +62 895-6054-76149
           </a>
+          <div className="flex gap-4 mt-2">
+            {['Instagram', 'LinkedIn', 'Behance'].map((s) => (
+              <a
+                key={s}
+                href="#"
+                className="text-[10px] font-semibold text-[#414843] hover:text-[#775a19] transition-colors uppercase tracking-[0.1em]"
+              >
+                {s}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
 
       {/* Bottom bar */}
       <div className="px-4 md:px-16 max-w-[1280px] mx-auto mt-8 md:mt-12 pt-6 md:pt-8 border-t border-[#c1c8c2]/10 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
         <span className="text-[10px] md:text-[11px] text-[#414843] opacity-50 uppercase tracking-[0.1em]">
-          © 2025 Rootivara Digital Studio. Organic Excellence.
+          © 2025 Rootivara. Website Agency Indonesia.
         </span>
         <div className="flex gap-6 md:gap-8">
           {['Privacy', 'Terms'].map((l) => (

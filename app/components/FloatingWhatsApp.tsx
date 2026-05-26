@@ -2,7 +2,7 @@
 
 export default function FloatingWhatsApp() {
   const waLink = `https://wa.me/62895605476149?text=${encodeURIComponent(
-    'Halo rootivara! Saya ingin konsultasi dan mulai proyek digital bersama kalian.'
+    'Halo rootivara! Saya ingin konsultasi website bisnis saya.'
   )}`;
 
   return (
@@ -43,7 +43,6 @@ export default function FloatingWhatsApp() {
         </svg>
       </a>
 
-      {/* Ripple ping */}
       <style>{`
         .wa-float::before {
           content: '';

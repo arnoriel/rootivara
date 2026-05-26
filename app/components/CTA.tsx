@@ -1,6 +1,6 @@
 export default function CTA() {
   const waLink = `https://wa.me/62895605476149?text=${encodeURIComponent(
-    'Halo rootivara! Saya ingin konsultasi dan mulai proyek digital bersama kalian.'
+    'Halo rootivara! Saya ingin konsultasi website bisnis saya.'
   )}`;
 
   return (
@@ -17,17 +17,19 @@ export default function CTA() {
       {/* Content */}
       <div className="relative z-10 px-4 md:px-16 text-center max-w-4xl mx-auto">
         <span className="text-[10px] md:text-[11px] font-semibold text-[#775a19] uppercase tracking-[0.4em] block mb-3 md:mb-6 reveal">
-          The Next Chapter
+          Mulai Sekarang
         </span>
-        <h2 className="text-[32px] md:text-[72px] font-bold leading-[1.05] tracking-[-0.04em] text-[#00190d] mb-6 md:mb-10 reveal reveal-delay-1">
-          Build a Digital Presence
-          <br />
-          That{' '}
+        <h2 className="text-[28px] md:text-[64px] font-bold leading-[1.06] tracking-[-0.03em] text-[#00190d] mb-4 md:mb-8 reveal reveal-delay-1">
+          Bangun Website yang Membantu Bisnis Anda{' '}
           <em className="font-light" style={{ fontStyle: 'italic' }}>
-            Feels
+            Lebih Dipercaya
           </em>{' '}
-          Premium.
+          dan Lebih Mudah Ditemukan Customer.
         </h2>
+
+        <p className="text-sm md:text-lg text-[#414843] leading-relaxed mb-7 md:mb-10 max-w-xl mx-auto reveal reveal-delay-1">
+          Konsultasikan kebutuhan website bisnis Anda bersama Rootivara. Gratis, tanpa tekanan.
+        </p>
 
         <div className="flex flex-col sm:flex-row gap-3 md:gap-5 justify-center items-center reveal reveal-delay-2">
           <a
@@ -37,14 +39,14 @@ export default function CTA() {
             className="bg-[#00190d] text-white px-8 py-3.5 md:px-12 md:py-5 rounded-full text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.18em]
               hover:scale-105 transition-transform duration-300 shadow-2xl shadow-[#00190d]/20 w-full sm:w-auto"
           >
-            Secure Your Slot
+            Konsultasi Sekarang
           </a>
           <a
             href="#services"
             className="border border-[#00190d] text-[#00190d] px-8 py-3.5 md:px-12 md:py-5 rounded-full text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.18em]
               hover:bg-[#00190d] hover:text-white transition-all duration-300 w-full sm:w-auto"
           >
-            Explore Services
+            Diskusikan Project
           </a>
         </div>
       </div>

@@ -4,24 +4,28 @@ import { useState } from 'react';
 
 const faqs = [
   {
-    q: 'What is the typical investment for a custom project?',
-    a: 'Our projects are bespoke and range from IDR 2.500.000 for professional websites up to IDR 5.500.000+ for full-scale applications, depending on complexity, features, and strategic requirements.',
+    q: 'Berapa lama pengerjaan website?',
+    a: 'Estimasi menyesuaikan kebutuhan project. Paket Starter biasanya 5–7 hari kerja, Paket Business Growth 10–14 hari kerja, dan Conversion Pro menyesuaikan kompleksitas. Kami akan memberikan estimasi yang lebih akurat setelah konsultasi awal.',
   },
   {
-    q: 'How long does a standard build take?',
-    a: 'A professional website typically takes 7–14 working days. A full application (SaaS, Mobile, or Web App) spans 3–8 weeks including discovery, design, development, and testing phases.',
+    q: 'Apakah sudah termasuk domain dan hosting?',
+    a: 'Domain dan hosting bisa include sesuai paket yang dipilih. Kami akan diskusikan detail ini saat konsultasi agar bisa memilih solusi yang paling sesuai kebutuhan dan budget bisnis Anda.',
   },
   {
-    q: 'Do you provide ongoing support after launch?',
-    a: 'Absolutely. We offer concierge maintenance plans that include performance monitoring, security updates, and iterative design improvements as your brand evolves.',
+    q: 'Apakah website SEO friendly?',
+    a: 'Ya, semua website yang kami bangun sudah menggunakan struktur SEO-ready sejak awal — mulai dari meta tags, heading hierarchy, loading speed, hingga mobile responsiveness yang merupakan faktor penting di Google.',
   },
   {
-    q: 'What does the payment structure look like?',
-    a: '50% upfront to kickstart the project, 50% upon completion. No hidden fees — ever. We believe in radical transparency from day one.',
+    q: 'Apakah bisa revisi setelah website jadi?',
+    a: 'Tersedia revisi sesuai kesepakatan project. Kami memastikan hasil akhir sesuai ekspektasi sebelum website diluncurkan. Detail jumlah revisi akan dijelaskan di proposal project.',
   },
   {
-    q: 'Can I integrate an AI chatbot or custom features?',
-    a: 'Yes! We build custom integrations, AI-powered features, API connections, and business management systems tailored to your exact needs.',
+    q: 'Setelah website jadi, apakah ada support?',
+    a: 'Ya, tersedia support dan maintenance setelah launching. Kami tidak meninggalkan client begitu saja — ada layanan maintenance berkala untuk memastikan website tetap berjalan dengan baik, aman, dan terus diperbarui.',
+  },
+  {
+    q: 'Bagaimana cara mulai bekerja sama dengan Rootivara?',
+    a: 'Cukup klik tombol Konsultasi Gratis atau hubungi kami via WhatsApp. Kami akan diskusikan kebutuhan bisnis Anda, memberikan rekomendasi solusi, dan menyiapkan proposal tanpa biaya dan tanpa tekanan.',
   },
 ];
 
@@ -29,17 +33,22 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="py-10 md:py-24 px-4 md:px-16 max-w-[1280px] mx-auto">
+    <section id="faq" className="py-10 md:py-24 px-4 md:px-16 max-w-[1280px] mx-auto">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-[26px] md:text-[40px] font-semibold leading-tight tracking-[-0.02em] text-[#00190d] mb-7 md:mb-12 text-center reveal">
-          Curated Inquiries
-        </h2>
+        <div className="text-center mb-7 md:mb-12 reveal">
+          <span className="text-[10px] md:text-[11px] font-semibold text-[#775a19] uppercase tracking-[0.3em] block mb-2 md:mb-4">
+            FAQ
+          </span>
+          <h2 className="text-[26px] md:text-[40px] font-semibold leading-tight tracking-[-0.02em] text-[#00190d]">
+            Pertanyaan yang Sering Ditanyakan
+          </h2>
+        </div>
 
         <div className="space-y-0">
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className={`border-b border-[#c1c8c2]/30 pb-4 pt-4 md:pb-6 md:pt-5 cursor-pointer reveal reveal-delay-${i + 1}`}
+              className={`border-b border-[#c1c8c2]/30 pb-4 pt-4 md:pb-6 md:pt-5 cursor-pointer reveal reveal-delay-${Math.min(i + 1, 5)}`}
               onClick={() => setOpen(open === i ? null : i)}
             >
               <div className="flex justify-between items-center gap-4">

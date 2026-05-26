@@ -14,14 +14,14 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: 'Services', href: '#services' },
-    { label: 'Projects', href: '#portfolio' },
-    { label: 'Process', href: '#process' },
-    { label: 'About', href: '#about' },
+    { label: 'Layanan', href: '#services' },
+    { label: 'Portfolio', href: '#portfolio' },
+    { label: 'Cara Kerja', href: '#process' },
+    { label: 'Harga', href: '#pricing' },
   ];
 
   const waLink = `https://wa.me/62895605476149?text=${encodeURIComponent(
-    'Halo rootivara! Saya ingin konsultasi dan mulai proyek digital bersama kalian.'
+    'Halo rootivara! Saya ingin konsultasi website bisnis saya.'
   )}`;
 
   return (
@@ -70,7 +70,7 @@ export default function Navbar() {
               hover:bg-[#785a1a] transition-all duration-300 active:scale-95 shadow-md shadow-[#775a19]/20
               whitespace-nowrap"
           >
-            Start Project
+            Konsultasi Gratis
           </a>
 
           {/* Mobile hamburger */}

@@ -1,106 +1,97 @@
 export default function Problems() {
-  const waLink = `https://wa.me/62895605476149?text=${encodeURIComponent(
-    'Halo rootivara! Saya ingin konsultasi dan mulai proyek digital bersama kalian.'
-  )}`;
+  const problems = [
+    { icon: 'sentiment_dissatisfied', text: 'Website terlihat tidak profesional' },
+    { icon: 'search_off', text: 'Tidak muncul di Google' },
+    { icon: 'timer_off', text: 'Loading terlalu lambat' },
+    { icon: 'help_outline', text: 'Visitor bingung harus klik apa' },
+    { icon: 'ads_click', text: 'Tidak memiliki CTA yang jelas' },
+    { icon: 'smartphone', text: 'Tampilan mobile berantakan' },
+    { icon: 'trending_down', text: 'Sudah punya website tapi tidak menghasilkan leads' },
+  ];
 
   return (
     <section
-      id="services"
+      id="problems"
       className="py-10 md:py-24 px-4 md:px-16 max-w-[1280px] mx-auto"
     >
-      {/* Header row */}
-      <div className="flex justify-between items-end mb-6 md:mb-12 reveal">
-        <div className="max-w-2xl">
-          <span className="text-[10px] md:text-[11px] font-semibold text-[#775a19] uppercase tracking-[0.3em] block mb-2 md:mb-4">
-            Expertise
+      <div className="grid grid-cols-12 gap-6 md:gap-12 items-center">
+        {/* Left — problem list */}
+        <div className="col-span-12 md:col-span-6">
+          <span className="text-[10px] md:text-[11px] font-semibold text-[#775a19] uppercase tracking-[0.3em] block mb-2 md:mb-4 reveal">
+            Masalah Umum
           </span>
-          <h2 className="text-[26px] md:text-[40px] font-semibold leading-tight tracking-[-0.02em] text-[#00190d]">
-            Strategic Design Ecosystems
+          <h2 className="text-[26px] md:text-[40px] font-semibold leading-tight tracking-[-0.02em] text-[#00190d] mb-4 md:mb-8 reveal reveal-delay-1">
+            Kenapa Banyak Website Tidak Menghasilkan Customer?
           </h2>
-        </div>
-        <a
-          href="#portfolio"
-          className="hidden md:block text-[11px] font-semibold text-[#00190d] uppercase tracking-[0.15em] border-b border-[#00190d] pb-1 hover:text-[#775a19] hover:border-[#775a19] transition-colors"
-        >
-          All Capabilities
-        </a>
-      </div>
 
-      {/* Grid */}
-      <div className="grid grid-cols-12 gap-3 md:gap-6">
-        {/* Card 1 — large */}
-        <div className="col-span-12 md:col-span-8 bg-[#f5f3ee] p-5 md:p-10 rounded-2xl border border-[#c1c8c2]/20 hover:border-[#775a19]/40 transition-colors group reveal reveal-delay-1">
-          <span className="material-symbols-outlined text-2xl md:text-4xl text-[#775a19] mb-3 md:mb-6 block">web</span>
-          <h3 className="text-lg md:text-2xl font-medium tracking-tight text-[#00190d] mb-2 md:mb-4">
-            High-Performance Web Development
-          </h3>
-          <p className="text-sm md:text-base text-[#414843] leading-relaxed max-w-md mb-4 md:mb-8">
-            We don&apos;t just build sites; we architect lightning-fast, secure, and infinitely scalable
-            digital platforms that function as your 24/7 sales powerhouse.
+          <div className="space-y-3 md:space-y-4">
+            {problems.map((p, i) => (
+              <div
+                key={p.text}
+                className={`flex items-start gap-3 md:gap-4 bg-[#fff8f0] border border-[#c1c8c2]/20 rounded-xl p-3 md:p-4 reveal reveal-delay-${Math.min(i + 2, 5)}`}
+              >
+                <span
+                  className="material-symbols-outlined text-[#b85c1a] shrink-0 mt-0.5"
+                  style={{ fontSize: '20px' }}
+                >
+                  {p.icon}
+                </span>
+                <span className="text-sm md:text-base text-[#414843] leading-snug">{p.text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Right — visual comparison */}
+        <div className="col-span-12 md:col-span-6 reveal reveal-delay-2">
+          <div className="space-y-4">
+            {/* Old website card */}
+            <div className="bg-[#f5f3ee] border border-[#c1c8c2]/30 rounded-2xl p-5 md:p-8">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-2 h-2 rounded-full bg-red-400" />
+                <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#b85c1a]">Website Lama</span>
+              </div>
+              <div className="space-y-2 opacity-60">
+                <div className="h-3 w-1/2 bg-[#c1c8c2] rounded" />
+                <div className="h-2 w-full bg-[#c1c8c2]/70 rounded" />
+                <div className="h-2 w-4/5 bg-[#c1c8c2]/70 rounded" />
+                <div className="h-16 w-full bg-[#c1c8c2]/40 rounded mt-3 flex items-center justify-center">
+                  <span className="text-[10px] text-[#8b9381]">Loading... 8s</span>
+                </div>
+              </div>
+              <div className="mt-3 flex gap-4 text-[10px] font-semibold">
+                <span className="text-red-500">✕ Tidak mobile-friendly</span>
+                <span className="text-red-500">✕ SEO buruk</span>
+              </div>
+            </div>
+
+            {/* Rootivara website card */}
+            <div className="bg-[#00190d] rounded-2xl p-5 md:p-8 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-40 h-40 bg-[#e9c176]/10 rounded-full blur-3xl pointer-events-none" />
+              <div className="flex items-center gap-2 mb-4 relative z-10">
+                <div className="w-2 h-2 rounded-full bg-[#28c840]" />
+                <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#e9c176]">Website Rootivara</span>
+              </div>
+              <div className="space-y-2 relative z-10">
+                <div className="h-3 w-2/3 bg-white/20 rounded" />
+                <div className="h-2 w-full bg-white/10 rounded" />
+                <div className="h-2 w-4/5 bg-white/10 rounded" />
+                <div className="h-16 w-full bg-[#0a2f1f] rounded mt-3 flex items-center justify-center border border-[#e9c176]/20">
+                  <span className="text-[10px] text-[#e9c176]">⚡ Load 0.8s</span>
+                </div>
+              </div>
+              <div className="mt-3 flex flex-wrap gap-4 text-[10px] font-semibold relative z-10">
+                <span className="text-[#4ade80]">✓ Mobile optimized</span>
+                <span className="text-[#4ade80]">✓ SEO ready</span>
+                <span className="text-[#4ade80]">✓ Convert visitor</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Closing statement */}
+          <p className="text-sm md:text-base text-[#414843] italic leading-relaxed mt-5 md:mt-6 border-l-2 border-[#775a19] pl-4">
+            Website seharusnya bukan hanya online — tapi membantu bisnis dipercaya dan dihubungi lebih cepat.
           </p>
-          <div className="flex flex-wrap gap-2 md:gap-3">
-            <span className="bg-white px-3 py-1 md:px-4 md:py-1.5 rounded text-[10px] md:text-[11px] font-medium text-[#8b9381] border border-[#c1c8c2]/30 uppercase tracking-wider">
-              React / Next.js
-            </span>
-            <span className="bg-white px-3 py-1 md:px-4 md:py-1.5 rounded text-[10px] md:text-[11px] font-medium text-[#8b9381] border border-[#c1c8c2]/30 uppercase tracking-wider">
-              Headless CMS
-            </span>
-          </div>
-        </div>
-
-        {/* Card 2 — dark accent */}
-        <div className="col-span-12 md:col-span-4 bg-[#00190d] text-white p-5 md:p-10 rounded-2xl flex flex-col justify-between reveal reveal-delay-2">
-          <div>
-            <span className="material-symbols-outlined text-2xl md:text-4xl text-[#e9c176] mb-3 md:mb-6 block">auto_awesome</span>
-            <h3 className="text-lg md:text-2xl font-medium tracking-tight mb-2 md:mb-4">Elite Landing Pages</h3>
-            <p className="text-sm md:text-base opacity-80 leading-relaxed">
-              Conversion-optimized experiences designed to turn clicks into loyal advocates.
-            </p>
-          </div>
-          <a
-            href={waLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-fit border-b border-[#e9c176] py-1.5 md:py-2 text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.15em] text-[#e9c176] hover:text-white hover:border-white transition-colors mt-4 md:mt-0"
-          >
-            Inquire Now
-          </a>
-        </div>
-
-        {/* Card 3 — small */}
-        <div className="col-span-6 md:col-span-4 bg-white p-5 md:p-10 rounded-2xl border border-[#c1c8c2]/20 editorial-shadow reveal reveal-delay-3">
-          <span className="material-symbols-outlined text-2xl md:text-4xl text-[#775a19] mb-3 md:mb-6 block">query_stats</span>
-          <h3 className="text-base md:text-2xl font-medium tracking-tight text-[#00190d] mb-2 md:mb-4">SEO Architecture</h3>
-          <p className="text-sm md:text-base text-[#414843] leading-relaxed">
-            Organic visibility built into the foundation, not bolted on as an afterthought.
-          </p>
-        </div>
-
-        {/* Card 4 — wide with image */}
-        <div className="col-span-6 md:col-span-8 bg-[#f0eee9] p-5 md:p-10 rounded-2xl flex items-center gap-5 md:gap-8 border border-[#c1c8c2]/20 reveal reveal-delay-4">
-          <div className="hidden sm:block w-32 h-32 md:w-44 md:h-44 bg-white rounded-xl rotate-3 shrink-0 editorial-shadow overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUn1X6cSQ0T0gyK4MWPt_fknidxcKZN7JFJmLcPH5-83nAvL2q7QxqC99uCoSPzrRTNcUHA6tLXqruVIv23pSEndExB2dFyWyLak4oQ_h02yEF3ZYQ0w21BuSaOQJvvuX32yUv7_1Ux-G5RSJcAtR6KfRsXd1KWt4PapEPrd4qXOwjtJNGnsDmQK4SOhvQwKIbmuubE_QcMY-tqchhBxqVOt0rjANuEH064nCR4ZISqvkbE9-Zo8BEvKIfFQynhhSijKlaz1z1dWcU"
-              alt="Analytics dashboard"
-              className="w-full h-full object-cover rounded-xl"
-            />
-          </div>
-          <div>
-            <h3 className="text-base md:text-2xl font-medium tracking-tight text-[#00190d] mb-2 md:mb-4">Brand Integration</h3>
-            <p className="text-sm md:text-base text-[#414843] leading-relaxed mb-3 md:mb-6">
-              Visual identity systems that bridge the gap between physical luxury and digital interaction.
-            </p>
-            <a
-              href={waLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[10px] md:text-[11px] font-semibold text-[#775a19] uppercase tracking-[0.15em] hover:translate-x-1 transition-transform inline-flex items-center gap-2"
-            >
-              Discover{' '}
-              <span className="material-symbols-outlined text-sm">arrow_forward</span>
-            </a>
-          </div>
         </div>
       </div>
     </section>
