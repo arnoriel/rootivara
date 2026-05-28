@@ -24,8 +24,32 @@ const faqs = [
     a: 'Ya, tersedia support dan maintenance setelah launching. Kami tidak meninggalkan client begitu saja — ada layanan maintenance berkala untuk memastikan website tetap berjalan dengan baik, aman, dan terus diperbarui.',
   },
   {
+    q: 'Apakah bisa dicicil atau bayar bertahap?',
+    a: 'Bisa. Kami memiliki sistem pembayaran bertahap yang fleksibel — biasanya terbagi menjadi DP di awal dan pelunasan setelah website selesai dan disetujui. Detail cicilan dapat didiskusikan saat konsultasi.',
+  },
+  {
+    q: 'Apakah Rootivara membantu mengisi konten website?',
+    a: 'Ya, kami membantu menyusun struktur konten dan copywriting dasar agar website terlihat profesional sejak pertama kali online. Client cukup menyediakan informasi bisnis, foto produk/jasa, dan data yang diperlukan.',
+  },
+  {
+    q: 'Bisa redesign website lama saya?',
+    a: 'Tentu. Kami melayani redesign website yang sudah ada. Kami akan melakukan audit terlebih dahulu, lalu merekomendasikan solusi terbaik — mulai dari perbaikan tampilan, struktur SEO, hingga peningkatan kecepatan dan conversion.',
+  },
+  {
+    q: 'Bisa request fitur atau desain custom?',
+    a: 'Bisa. Rootivara mengerjakan setiap project dengan pendekatan custom, bukan template asal jadi. Fitur khusus seperti booking system, katalog produk, form inquiry, atau integrasi sistem lainnya dapat didiskusikan dalam konsultasi.',
+  },
+  {
+    q: 'Apakah website saya bisa muncul di Google?',
+    a: 'Ya. Semua website yang kami bangun sudah memiliki struktur SEO-ready sejak awal. Dengan optimasi yang tepat, website bisnis Anda akan memiliki fondasi yang kuat untuk muncul di pencarian Google secara organik.',
+  },
+  {
+    q: 'Apakah website bisa diintegrasikan dengan WhatsApp?',
+    a: 'Ya, integrasi WhatsApp CTA adalah standar di semua paket kami. Ini memudahkan visitor untuk langsung menghubungi bisnis Anda hanya dengan satu klik — meningkatkan peluang closing secara signifikan.',
+  },
+  {
     q: 'Bagaimana cara mulai bekerja sama dengan Rootivara?',
-    a: 'Cukup klik tombol Konsultasi Gratis atau hubungi kami via WhatsApp. Kami akan diskusikan kebutuhan bisnis Anda, memberikan rekomendasi solusi, dan menyiapkan proposal tanpa biaya dan tanpa tekanan.',
+    a: 'Cukup klik tombol Diskusikan Website Bisnis Anda atau hubungi kami via WhatsApp. Kami akan diskusikan kebutuhan bisnis Anda, memberikan rekomendasi solusi, dan menyiapkan proposal tanpa biaya dan tanpa tekanan.',
   },
 ];
 
@@ -42,6 +66,9 @@ export default function FAQ() {
           <h2 className="text-[26px] md:text-[40px] font-semibold leading-tight tracking-[-0.02em] text-[#00190d]">
             Pertanyaan yang Sering Ditanyakan
           </h2>
+          <p className="text-sm md:text-base text-[#414843] mt-3 max-w-xl mx-auto leading-relaxed">
+            Masih ada pertanyaan? Hubungi kami langsung via WhatsApp — kami siap membantu.
+          </p>
         </div>
 
         <div className="space-y-0">

@@ -95,9 +95,70 @@ export default function Pricing() {
     'Kebutuhan maintenance berkala',
   ];
 
+  const whyInvest = [
+    {
+      icon: 'schedule',
+      title: 'Bekerja 24 Jam untuk Bisnis Anda',
+      desc: 'Website tidak pernah tidur. Calon customer bisa melihat bisnis Anda kapan saja — bahkan tengah malam sekalipun.',
+    },
+    {
+      icon: 'verified',
+      title: 'Meningkatkan Trust & Kredibilitas',
+      desc: 'Bisnis dengan website profesional terlihat lebih terpercaya. Customer lebih yakin untuk menghubungi dan membeli.',
+    },
+    {
+      icon: 'search',
+      title: 'Lebih Mudah Ditemukan di Google',
+      desc: 'Website SEO-ready membantu bisnis Anda muncul di pencarian Google secara organik — tanpa harus bayar iklan terus-menerus.',
+    },
+    {
+      icon: 'trending_up',
+      title: 'Membantu Closing Lebih Cepat',
+      desc: 'Website yang dirancang dengan baik membangun kepercayaan lebih cepat, sehingga calon customer lebih mudah mengambil keputusan.',
+    },
+  ];
+
   return (
     <section id="pricing" className="py-10 md:py-24 bg-[#fbf9f4]">
       <div className="px-4 md:px-16 max-w-[1280px] mx-auto">
+
+        {/* ── WHY INVEST SECTION (new) ── */}
+        <div className="mb-12 md:mb-20 reveal">
+          <div className="text-center mb-6 md:mb-10">
+            <span className="text-[10px] md:text-[11px] font-semibold text-[#775a19] uppercase tracking-[0.3em] block mb-2 md:mb-3">
+              Kenapa Investasi Website?
+            </span>
+            <h2 className="text-[22px] md:text-[36px] font-semibold leading-tight tracking-[-0.02em] text-[#00190d]">
+              Website Bukan Biaya — Website Adalah Investasi
+            </h2>
+            <p className="text-sm md:text-base text-[#414843] mt-3 max-w-2xl mx-auto leading-relaxed">
+              Bisnis yang tampil profesional online lebih dipercaya, lebih mudah ditemukan, dan lebih
+              mudah mendapatkan customer — bahkan saat Anda tidak aktif berjualan.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
+            {whyInvest.map((item, i) => (
+              <div
+                key={item.title}
+                className={`bg-white border border-[#c1c8c2]/20 rounded-2xl p-5 md:p-6 editorial-shadow reveal reveal-delay-${i + 1}`}
+              >
+                <span
+                  className="material-symbols-outlined text-[#775a19] mb-3 block"
+                  style={{ fontSize: '28px', fontVariationSettings: "'FILL' 1" }}
+                >
+                  {item.icon}
+                </span>
+                <h3 className="text-sm md:text-base font-semibold text-[#00190d] mb-2 leading-snug tracking-tight">
+                  {item.title}
+                </h3>
+                <p className="text-[11px] md:text-xs text-[#414843] leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Header */}
         <div className="text-center mb-8 md:mb-14 reveal">
           <span className="text-[10px] md:text-[11px] font-semibold text-[#775a19] uppercase tracking-[0.3em] block mb-2 md:mb-4">

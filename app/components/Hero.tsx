@@ -2,7 +2,7 @@
 
 export default function Hero() {
   const waLink = `https://wa.me/62895605476149?text=${encodeURIComponent(
-    'Halo rootivara! Saya ingin konsultasi website bisnis saya.'
+    'Halo rootivara! Saya ingin diskusikan website bisnis saya.'
   )}`;
 
   return (
@@ -13,17 +13,29 @@ export default function Hero() {
           <span className="text-[10px] md:text-[11px] font-semibold text-[#775a19] uppercase tracking-[0.3em] block mb-3 md:mb-6 hero-entrance">
             Website Agency Indonesia
           </span>
+
+          {/* REVISED HEADLINE — psychological hook */}
           <h1 className="text-[32px] md:text-[68px] font-bold leading-[1.06] tracking-[-0.03em] text-[#00190d] mb-3 md:mb-6 hero-entrance hero-entrance-delay-1">
-            Website Modern yang{' '}
+            Website Bukan{' '}
             <em className="font-light" style={{ fontStyle: 'italic', fontWeight: 300 }}>
-              Membantu Bisnis
+              Sekadar Online
             </em>{' '}
-            Lebih Profesional & Mudah Ditemukan di Google
+            — Website Harus Membantu Bisnis Anda Closing
           </h1>
-          <p className="text-sm md:text-lg text-[#414843] leading-relaxed max-w-xl mb-6 md:mb-10 hero-entrance hero-entrance-delay-2">
-            Rootivara membantu UMKM, bisnis jasa, klinik, dan brand lokal memiliki website cepat,
-            premium, SEO-ready, dan siap menghasilkan leads.
+
+          {/* REVISED SUBHEADLINE — problem-aware */}
+          <p className="text-sm md:text-lg text-[#414843] leading-relaxed max-w-xl mb-3 md:mb-5 hero-entrance hero-entrance-delay-2">
+            Banyak bisnis kehilangan customer karena website yang tidak meyakinkan.
+            Rootivara membangun website modern, SEO-ready, dan dirancang untuk meningkatkan
+            kepercayaan — sehingga bisnis Anda lebih mudah mendapatkan customer.
           </p>
+
+          {/* Social proof line */}
+          <p className="text-[11px] md:text-sm font-semibold text-[#1a7a4a] mb-6 md:mb-10 hero-entrance hero-entrance-delay-2">
+            ✦ 50+ bisnis sudah menggunakan website Rootivara untuk tampil lebih profesional & dipercaya
+          </p>
+
+          {/* REVISED CTAs */}
           <div className="flex flex-wrap gap-4 md:gap-6 items-center hero-entrance hero-entrance-delay-3">
             <a
               href={waLink}
@@ -32,20 +44,20 @@ export default function Hero() {
               className="bg-[#00190d] text-white px-7 py-3 md:px-10 md:py-4 rounded-lg text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.15em]
                 hover:bg-[#0a2f1f] transition-all duration-300 active:scale-95"
             >
-              Konsultasi Gratis
+              Diskusikan Website Bisnis Anda
             </a>
             <a
               href="#portfolio"
               className="text-[10px] md:text-[11px] font-semibold text-[#00190d] uppercase tracking-[0.15em] border-b border-[#775a19] pb-1
                 hover:text-[#775a19] transition-colors duration-200"
             >
-              Lihat Portfolio
+              Lihat Hasil Project Kami →
             </a>
           </div>
 
           {/* Trust badges */}
           <div className="flex flex-wrap gap-4 mt-6 md:mt-10 hero-entrance hero-entrance-delay-4">
-            {['Fast Response', 'SEO Ready', 'Mobile Optimized'].map((badge) => (
+            {['Fast Response', 'SEO Ready', 'Mobile Optimized', 'Conversion Focused'].map((badge) => (
               <span
                 key={badge}
                 className="flex items-center gap-1.5 text-[10px] font-semibold text-[#414843] uppercase tracking-[0.12em]"

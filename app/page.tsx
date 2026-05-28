@@ -7,6 +7,8 @@ import Services from "./components/Services";
 import Process from "./components/Process";
 import Portfolio from "./components/Portfolio";
 import Testimonials from "./components/Testimonials";
+import WhyRootivara from "./components/WhyRootivara";
+import TikTokSection from "./components/TikTokSection";
 import Pricing from "./components/Pricing";
 import FAQ from "./components/FAQ";
 import CTA from "./components/CTA";
@@ -26,6 +28,8 @@ export default function Home() {
       <Process />
       <Portfolio />
       <Testimonials />
+      <WhyRootivara />
+      <TikTokSection />
       <Pricing />
       <FAQ />
       <CTA />
