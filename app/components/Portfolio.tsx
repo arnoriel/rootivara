@@ -125,7 +125,7 @@ export default function Portfolio() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#00190d]/80 to-[#00190d]/10 group-hover:from-[#00190d]/90 transition-all duration-300" />
             {/* Default info */}
             <div className="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:right-8">
-              <span className="text-white/60 text-[9px] md:text-[11px] font-semibold uppercase tracking-[0.15em] mb-1 md:mb-2 block">
+              <span className="text-white/80 text-[9px] md:text-[11px] font-semibold uppercase tracking-[0.15em] mb-1 md:mb-2 block">
                 {p.category}
               </span>
               <h3 className="text-sm md:text-2xl font-semibold">{p.title}</h3>
@@ -135,14 +135,14 @@ export default function Portfolio() {
               <span className="text-[#e9c176] text-[9px] md:text-[10px] font-bold uppercase tracking-wider mb-2 block">
                 {p.category} — {p.title}
               </span>
-              <p className="text-[10px] md:text-xs text-white/70 leading-relaxed mb-1">
-                <span className="text-white/40">Masalah: </span>{p.problem}
+              <p className="text-[10px] md:text-xs text-white/85 leading-relaxed mb-1">
+                <span className="text-white/85">Masalah: </span>{p.problem}
               </p>
-              <p className="text-[10px] md:text-xs text-white/70 leading-relaxed mb-1">
-                <span className="text-white/40">Solusi: </span>{p.solution}
+              <p className="text-[10px] md:text-xs text-white/85 leading-relaxed mb-1">
+                <span className="text-white/85">Solusi: </span>{p.solution}
               </p>
               <p className="text-[10px] md:text-xs text-[#4ade80] leading-relaxed">
-                <span className="text-white/40">Hasil: </span>{p.result}
+                <span className="text-white/85">Hasil: </span>{p.result}
               </p>
             </div>
           </div>

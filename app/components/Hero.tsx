@@ -24,7 +24,7 @@ export default function Hero() {
           </h1>
 
           {/* REVISED SUBHEADLINE — problem-aware */}
-          <p className="text-sm md:text-lg text-[#414843] leading-relaxed max-w-xl mb-3 md:mb-5 hero-entrance hero-entrance-delay-2">
+          <p className="text-sm md:text-lg text-[#2d3530] leading-relaxed max-w-xl mb-3 md:mb-5 hero-entrance hero-entrance-delay-2">
             Banyak bisnis kehilangan customer karena website yang tidak meyakinkan.
             Rootivara membangun website modern, SEO-ready, dan dirancang untuk meningkatkan
             kepercayaan — sehingga bisnis Anda lebih mudah mendapatkan customer.
@@ -60,7 +60,7 @@ export default function Hero() {
             {['Fast Response', 'SEO Ready', 'Mobile Optimized', 'Conversion Focused'].map((badge) => (
               <span
                 key={badge}
-                className="flex items-center gap-1.5 text-[10px] font-semibold text-[#414843] uppercase tracking-[0.12em]"
+                className="flex items-center gap-1.5 text-[10px] font-semibold text-[#2d3530] uppercase tracking-[0.12em]"
               >
                 <span
                   className="material-symbols-outlined text-[#775a19]"
@@ -109,7 +109,7 @@ export default function Hero() {
           {/* Analytics floating card */}
           <div className="absolute -bottom-6 -left-12 w-52 bg-white p-4 rounded-xl editorial-shadow z-20 hidden lg:block border border-[#c1c8c2]/30">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-[9px] font-bold text-[#414843] uppercase tracking-wider">Organic Traffic</span>
+              <span className="text-[9px] font-bold text-[#2d3530] uppercase tracking-wider">Organic Traffic</span>
               <span className="text-[9px] font-bold text-[#1a7a4a] bg-[#e8f7ef] px-1.5 py-0.5 rounded">+82%</span>
             </div>
             <div className="flex items-end gap-1 h-10">

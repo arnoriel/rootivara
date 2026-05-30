@@ -51,7 +51,7 @@ export default function Process() {
           <h2 className="text-[26px] md:text-[40px] font-semibold leading-tight tracking-[-0.02em] text-[#00190d]">
             Proses Pengerjaan yang Simple & Terarah
           </h2>
-          <p className="text-sm md:text-base text-[#414843] mt-3 max-w-xl mx-auto">
+          <p className="text-sm md:text-base text-[#2d3530] mt-3 max-w-xl mx-auto">
             Dari konsultasi hingga launching, kami pastikan prosesnya mudah dipahami dan tidak membingungkan.
           </p>
         </div>
@@ -72,7 +72,7 @@ export default function Process() {
               <h3 className="text-base md:text-xl font-semibold text-[#00190d] mb-2 tracking-tight">
                 {step.title}
               </h3>
-              <p className="text-sm md:text-base text-[#414843] leading-relaxed">{step.desc}</p>
+              <p className="text-sm md:text-base text-[#2d3530] leading-relaxed">{step.desc}</p>
             </div>
           ))}
         </div>

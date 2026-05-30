@@ -29,7 +29,7 @@ export default function About() {
           <h2 className="text-[22px] md:text-[36px] font-semibold leading-tight tracking-[-0.02em] text-[#00190d]">
             Dipercaya Berbagai Jenis Bisnis
           </h2>
-          <p className="text-sm md:text-base text-[#414843] mt-3 max-w-xl mx-auto">
+          <p className="text-sm md:text-base text-[#2d3530] mt-3 max-w-xl mx-auto">
             Setiap website dibangun berdasarkan kebutuhan bisnis, bukan template asal jadi.
           </p>
         </div>
@@ -44,7 +44,7 @@ export default function About() {
               <span className="block text-[28px] md:text-[48px] font-bold text-[#00190d] mb-1 leading-none tracking-[-0.03em]">
                 {stat.value}
               </span>
-              <span className="text-[10px] md:text-[11px] font-semibold text-[#414843] uppercase tracking-[0.12em]">
+              <span className="text-[10px] md:text-[11px] font-semibold text-[#2d3530] uppercase tracking-[0.12em]">
                 {stat.label}
               </span>
             </div>
@@ -64,7 +64,7 @@ export default function About() {
               >
                 {ind.icon}
               </span>
-              <span className="text-[11px] font-semibold text-[#414843] uppercase tracking-[0.1em]">
+              <span className="text-[11px] font-semibold text-[#2d3530] uppercase tracking-[0.1em]">
                 {ind.label}
               </span>
             </div>

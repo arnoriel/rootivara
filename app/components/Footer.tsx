@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="text-[18px] md:text-[22px] font-bold tracking-tight text-[#00190d] mb-3 md:mb-4">
             Rootivara
           </div>
-          <p className="text-xs md:text-sm text-[#414843] leading-relaxed max-w-xs mb-4 md:mb-6">
+          <p className="text-xs md:text-sm text-[#2d3530] leading-relaxed max-w-xs mb-4 md:mb-6">
             Membantu bisnis tampil profesional online dengan website cepat, SEO-ready, dan siap menghasilkan leads.
           </p>
           <a
@@ -27,9 +27,9 @@ export default function Footer() {
 
         {/* Layanan */}
         <div>
-          <h4 className="text-[10px] md:text-[11px] font-bold text-[#00190d] uppercase tracking-[0.15em] mb-4 md:mb-6">
+          <h3 className="text-[10px] md:text-[11px] font-bold text-[#00190d] uppercase tracking-[0.15em] mb-4 md:mb-6">
             Layanan
-          </h4>
+          </h3>
           <ul className="space-y-3 md:space-y-4">
             {[
               'Website Company Profile',
@@ -42,7 +42,7 @@ export default function Footer() {
               <li key={s}>
                 <a
                   href="#services"
-                  className="text-[10px] md:text-[11px] font-semibold text-[#414843] hover:text-[#775a19] transition-colors uppercase tracking-[0.1em]"
+                  className="text-[10px] md:text-[11px] font-semibold text-[#2d3530] hover:text-[#775a19] transition-colors uppercase tracking-[0.1em]"
                 >
                   {s}
                 </a>
@@ -53,9 +53,9 @@ export default function Footer() {
 
         {/* Navigasi */}
         <div>
-          <h4 className="text-[10px] md:text-[11px] font-bold text-[#00190d] uppercase tracking-[0.15em] mb-4 md:mb-6">
+          <h3 className="text-[10px] md:text-[11px] font-bold text-[#00190d] uppercase tracking-[0.15em] mb-4 md:mb-6">
             Navigasi
-          </h4>
+          </h3>
           <ul className="space-y-3 md:space-y-4">
             {[
               { label: 'Portfolio', href: '#portfolio' },
@@ -66,7 +66,7 @@ export default function Footer() {
               <li key={link.label}>
                 <a
                   href={link.href}
-                  className="text-[10px] md:text-[11px] font-semibold text-[#414843] hover:text-[#775a19] transition-colors uppercase tracking-[0.1em]"
+                  className="text-[10px] md:text-[11px] font-semibold text-[#2d3530] hover:text-[#775a19] transition-colors uppercase tracking-[0.1em]"
                 >
                   {link.label}
                 </a>
@@ -77,10 +77,10 @@ export default function Footer() {
 
         {/* Kontak */}
         <div>
-          <h4 className="text-[10px] md:text-[11px] font-bold text-[#00190d] uppercase tracking-[0.15em] mb-4 md:mb-6">
+          <h3 className="text-[10px] md:text-[11px] font-bold text-[#00190d] uppercase tracking-[0.15em] mb-4 md:mb-6">
             Kontak
-          </h4>
-          <p className="text-[10px] md:text-[11px] font-semibold text-[#414843] uppercase tracking-[0.1em] mb-3 md:mb-4">
+          </h3>
+          <p className="text-[10px] md:text-[11px] font-semibold text-[#2d3530] uppercase tracking-[0.1em] mb-3 md:mb-4">
             hello@rootivara.com
           </p>
           <a
@@ -96,7 +96,7 @@ export default function Footer() {
               <a
                 key={s}
                 href="#"
-                className="text-[10px] font-semibold text-[#414843] hover:text-[#775a19] transition-colors uppercase tracking-[0.1em]"
+                className="text-[10px] font-semibold text-[#2d3530] hover:text-[#775a19] transition-colors uppercase tracking-[0.1em]"
               >
                 {s}
               </a>
@@ -107,7 +107,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="px-4 md:px-16 max-w-[1280px] mx-auto mt-8 md:mt-12 pt-6 md:pt-8 border-t border-[#c1c8c2]/10 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
-        <span className="text-[10px] md:text-[11px] text-[#414843] opacity-50 uppercase tracking-[0.1em]">
+        <span className="text-[10px] md:text-[11px] text-[#2d3530] opacity-80 uppercase tracking-[0.1em]">
           © 2025 Rootivara. Website Agency Indonesia.
         </span>
         <div className="flex gap-6 md:gap-8">
@@ -115,7 +115,7 @@ export default function Footer() {
             <a
               key={l}
               href="#"
-              className="text-[10px] md:text-[11px] text-[#414843] opacity-50 hover:opacity-100 transition-opacity uppercase tracking-[0.1em]"
+              className="text-[10px] md:text-[11px] text-[#2d3530] opacity-80 hover:opacity-100 transition-opacity uppercase tracking-[0.1em]"
             >
               {l}
             </a>

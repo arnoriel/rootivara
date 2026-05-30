@@ -66,7 +66,7 @@ export default function FAQ() {
           <h2 className="text-[26px] md:text-[40px] font-semibold leading-tight tracking-[-0.02em] text-[#00190d]">
             Pertanyaan yang Sering Ditanyakan
           </h2>
-          <p className="text-sm md:text-base text-[#414843] mt-3 max-w-xl mx-auto leading-relaxed">
+          <p className="text-sm md:text-base text-[#2d3530] mt-3 max-w-xl mx-auto leading-relaxed">
             Masih ada pertanyaan? Hubungi kami langsung via WhatsApp — kami siap membantu.
           </p>
         </div>
@@ -91,7 +91,7 @@ export default function FAQ() {
               </div>
 
               {open === i && (
-                <p className="mt-3 text-sm md:text-base text-[#414843] leading-relaxed">
+                <p className="mt-3 text-sm md:text-base text-[#2d3530] leading-relaxed">
                   {faq.a}
                 </p>
               )}

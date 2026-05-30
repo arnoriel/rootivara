@@ -95,7 +95,7 @@ export default function Services() {
             </h3>
             <p
               className={`text-sm md:text-base leading-relaxed mb-4 md:mb-6
-                ${s.accent ? 'text-white/70' : 'text-[#414843]'}`}
+                ${s.accent ? 'text-white/70' : 'text-[#2d3530]'}`}
             >
               {s.desc}
             </p>
@@ -106,7 +106,7 @@ export default function Services() {
                   className={`px-2.5 py-1 rounded text-[9px] md:text-[10px] font-semibold uppercase tracking-wider
                     ${s.accent
                       ? 'bg-white/10 text-white/60'
-                      : 'bg-white border border-[#c1c8c2]/30 text-[#8b9381]'
+                      : 'bg-white border border-[#c1c8c2]/30 text-[#4d5c50]'
                     }`}
                 >
                   {tag}

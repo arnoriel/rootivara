@@ -87,7 +87,7 @@ export default function Testimonials() {
                   <span className="text-[10px] md:text-[11px] font-bold text-[#00190d] uppercase tracking-[0.1em] block">
                     {t.author}
                   </span>
-                  <span className="text-[10px] md:text-xs text-[#414843] uppercase tracking-wider">
+                  <span className="text-[10px] md:text-xs text-[#2d3530] uppercase tracking-wider">
                     {t.role}
                   </span>
                 </div>

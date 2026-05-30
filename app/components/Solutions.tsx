@@ -42,7 +42,7 @@ export default function Solutions() {
           <h2 className="text-[26px] md:text-[40px] font-semibold leading-tight tracking-[-0.02em]">
             Apa yang Didapat Saat Menggunakan Website Rootivara?
           </h2>
-          <p className="text-sm md:text-base text-[#8b9381] mt-3 max-w-xl mx-auto leading-relaxed">
+          <p className="text-sm md:text-base text-[#a8b5a2] mt-3 max-w-xl mx-auto leading-relaxed">
             Setiap website kami dibangun dengan tujuan jelas: membantu bisnis tampil profesional dan
             lebih mudah dihubungi customer.
           </p>
@@ -62,7 +62,7 @@ export default function Solutions() {
               <h3 className="text-base md:text-xl font-semibold mb-2 md:mb-3 tracking-tight">
                 {b.title}
               </h3>
-              <p className="text-sm md:text-base text-[#8b9381] leading-relaxed">{b.desc}</p>
+              <p className="text-sm md:text-base text-[#a8b5a2] leading-relaxed">{b.desc}</p>
             </div>
           ))}
         </div>

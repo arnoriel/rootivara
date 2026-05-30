@@ -29,7 +29,7 @@ export default function CTA() {
           — Bukan Sekadar Tampil Online.
         </h2>
 
-        <p className="text-sm md:text-lg text-[#414843] leading-relaxed mb-3 md:mb-5 max-w-xl mx-auto reveal reveal-delay-1">
+        <p className="text-sm md:text-lg text-[#2d3530] leading-relaxed mb-3 md:mb-5 max-w-xl mx-auto reveal reveal-delay-1">
           Setiap hari tanpa website yang meyakinkan adalah hari yang kehilangan potensi customer.
           Diskusikan strategi website bisnis Anda bersama Rootivara sekarang.
         </p>

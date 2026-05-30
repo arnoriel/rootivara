@@ -36,7 +36,7 @@ export default function Problems() {
                 >
                   {p.icon}
                 </span>
-                <span className="text-sm md:text-base text-[#414843] leading-snug">{p.text}</span>
+                <span className="text-sm md:text-base text-[#2d3530] leading-snug">{p.text}</span>
               </div>
             ))}
           </div>
@@ -56,7 +56,7 @@ export default function Problems() {
                 <div className="h-2 w-full bg-[#c1c8c2]/70 rounded" />
                 <div className="h-2 w-4/5 bg-[#c1c8c2]/70 rounded" />
                 <div className="h-16 w-full bg-[#c1c8c2]/40 rounded mt-3 flex items-center justify-center">
-                  <span className="text-[10px] text-[#8b9381]">Loading... 8s</span>
+                  <span className="text-[10px] text-[#4d5c50]">Loading... 8s</span>
                 </div>
               </div>
               <div className="mt-3 flex gap-4 text-[10px] font-semibold">
@@ -89,7 +89,7 @@ export default function Problems() {
           </div>
 
           {/* Closing statement */}
-          <p className="text-sm md:text-base text-[#414843] italic leading-relaxed mt-5 md:mt-6 border-l-2 border-[#775a19] pl-4">
+          <p className="text-sm md:text-base text-[#2d3530] italic leading-relaxed mt-5 md:mt-6 border-l-2 border-[#775a19] pl-4">
             Website seharusnya bukan hanya online — tapi membantu bisnis dipercaya dan dihubungi lebih cepat.
           </p>
         </div>

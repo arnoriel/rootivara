@@ -122,16 +122,17 @@ export default function Pricing() {
     <section id="pricing" className="py-10 md:py-24 bg-[#fbf9f4]">
       <div className="px-4 md:px-16 max-w-[1280px] mx-auto">
 
-        {/* ── WHY INVEST SECTION (new) ── */}
+        {/* ── WHY INVEST SECTION ── */}
         <div className="mb-12 md:mb-20 reveal">
           <div className="text-center mb-6 md:mb-10">
-            <span className="text-[10px] md:text-[11px] font-semibold text-[#775a19] uppercase tracking-[0.3em] block mb-2 md:mb-3">
+            {/* h2 appropriate here — major section heading */}
+            <span className="text-xs md:text-[13px] font-semibold text-[#5c4310] uppercase tracking-[0.3em] block mb-2 md:mb-3">
               Kenapa Investasi Website?
             </span>
             <h2 className="text-[22px] md:text-[36px] font-semibold leading-tight tracking-[-0.02em] text-[#00190d]">
               Website Bukan Biaya — Website Adalah Investasi
             </h2>
-            <p className="text-sm md:text-base text-[#414843] mt-3 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-sm md:text-base text-[#2d3530] mt-3 max-w-2xl mx-auto leading-relaxed">
               Bisnis yang tampil profesional online lebih dipercaya, lebih mudah ditemukan, dan lebih
               mudah mendapatkan customer — bahkan saat Anda tidak aktif berjualan.
             </p>
@@ -148,10 +149,11 @@ export default function Pricing() {
                 >
                   {item.icon}
                 </span>
+                {/* h3 under the h2 — correct heading order */}
                 <h3 className="text-sm md:text-base font-semibold text-[#00190d] mb-2 leading-snug tracking-tight">
                   {item.title}
                 </h3>
-                <p className="text-[11px] md:text-xs text-[#414843] leading-relaxed">
+                <p className="text-xs md:text-[13px] text-[#2d3530] leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -161,13 +163,13 @@ export default function Pricing() {
 
         {/* Header */}
         <div className="text-center mb-8 md:mb-14 reveal">
-          <span className="text-[10px] md:text-[11px] font-semibold text-[#775a19] uppercase tracking-[0.3em] block mb-2 md:mb-4">
+          <span className="text-xs md:text-[13px] font-semibold text-[#5c4310] uppercase tracking-[0.3em] block mb-2 md:mb-4">
             Pricing Plans
           </span>
           <h2 className="text-[26px] md:text-[40px] font-semibold leading-tight tracking-[-0.02em] text-[#00190d] mb-3">
             Pilih Solusi Website Sesuai Kebutuhan Bisnis Anda
           </h2>
-          <p className="text-sm md:text-base text-[#414843] max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm md:text-base text-[#2d3530] max-w-2xl mx-auto leading-relaxed">
             Setiap bisnis memiliki kebutuhan yang berbeda. Rootivara menyediakan solusi website modern,
             SEO-ready, dan fokus conversion untuk membantu bisnis tampil lebih profesional secara online.
           </p>
@@ -187,7 +189,7 @@ export default function Pricing() {
               {/* Badge */}
               {pkg.badge && (
                 <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                  <span className="bg-[#e9c176] text-[#00190d] text-[9px] font-bold uppercase tracking-[0.15em] px-3 py-1.5 rounded-full whitespace-nowrap">
+                  <span className="bg-[#e9c176] text-[#00190d] text-[11px] font-bold uppercase tracking-[0.15em] px-3 py-1.5 rounded-full whitespace-nowrap">
                     {pkg.badge}
                   </span>
                 </div>
@@ -195,8 +197,8 @@ export default function Pricing() {
 
               {/* Package label */}
               <span
-                className={`text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] block mb-2
-                  ${pkg.highlight ? 'text-[#e9c176]' : 'text-[#775a19]'}`}
+                className={`text-xs md:text-[13px] font-bold uppercase tracking-[0.2em] block mb-2
+                  ${pkg.highlight ? 'text-[#e9c176]' : 'text-[#5c4310]'}`}
               >
                 {pkg.label}
               </span>
@@ -204,23 +206,23 @@ export default function Pricing() {
               {/* Price */}
               <div className="mb-1">
                 <span
-                  className={`text-xl md:text-3xl font-bold tracking-tight
+                  className={`text-2xl md:text-3xl font-bold tracking-tight
                     ${pkg.highlight ? 'text-white' : 'text-[#00190d]'}`}
                 >
                   {pkg.price}
                 </span>
               </div>
               <span
-                className={`text-[10px] mb-4 md:mb-6 block
-                  ${pkg.highlight ? 'text-white/40' : 'text-[#8b9381]'}`}
+                className={`text-xs mb-4 md:mb-6 block
+                  ${pkg.highlight ? 'text-white/60' : 'text-[#4d5c50]'}`}
               >
                 *{pkg.priceNote}
               </span>
 
               {/* For who */}
               <p
-                className={`text-sm leading-relaxed mb-5 md:mb-6 pb-5 md:pb-6 border-b
-                  ${pkg.highlight ? 'text-white/70 border-white/10' : 'text-[#414843] border-[#c1c8c2]/20'}`}
+                className={`text-sm md:text-base leading-relaxed mb-5 md:mb-6 pb-5 md:pb-6 border-b
+                  ${pkg.highlight ? 'text-white/80 border-white/10' : 'text-[#2d3530] border-[#c1c8c2]/20'}`}
               >
                 {pkg.forWho}
               </p>
@@ -228,8 +230,8 @@ export default function Pricing() {
               {/* Benefits */}
               <div className="mb-4 md:mb-5">
                 <span
-                  className={`text-[9px] font-bold uppercase tracking-[0.15em] block mb-3
-                    ${pkg.highlight ? 'text-[#e9c176]' : 'text-[#775a19]'}`}
+                  className={`text-[11px] md:text-xs font-bold uppercase tracking-[0.15em] block mb-3
+                    ${pkg.highlight ? 'text-[#e9c176]' : 'text-[#5c4310]'}`}
                 >
                   Yang Didapat
                 </span>
@@ -244,8 +246,8 @@ export default function Pricing() {
                         check_circle
                       </span>
                       <span
-                        className={`text-[11px] md:text-sm leading-snug
-                          ${pkg.highlight ? 'text-white/80' : 'text-[#414843]'}`}
+                        className={`text-sm md:text-[15px] leading-snug
+                          ${pkg.highlight ? 'text-white/90' : 'text-[#2d3530]'}`}
                       >
                         {b}
                       </span>
@@ -257,8 +259,8 @@ export default function Pricing() {
               {/* Features */}
               <div className="mb-5 md:mb-6 flex-1">
                 <span
-                  className={`text-[9px] font-bold uppercase tracking-[0.15em] block mb-3
-                    ${pkg.highlight ? 'text-[#e9c176]' : 'text-[#775a19]'}`}
+                  className={`text-[11px] md:text-xs font-bold uppercase tracking-[0.15em] block mb-3
+                    ${pkg.highlight ? 'text-[#e9c176]' : 'text-[#5c4310]'}`}
                 >
                   Fitur
                 </span>
@@ -266,10 +268,10 @@ export default function Pricing() {
                   {pkg.features.map((f) => (
                     <li
                       key={f}
-                      className={`text-[10px] md:text-xs flex items-center gap-2
-                        ${pkg.highlight ? 'text-white/60' : 'text-[#8b9381]'}`}
+                      className={`text-xs md:text-[13px] flex items-center gap-2
+                        ${pkg.highlight ? 'text-white/75' : 'text-[#3a4a3d]'}`}
                     >
-                      <span className="w-1 h-1 rounded-full bg-current shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-current shrink-0" />
                       {f}
                     </li>
                   ))}
@@ -278,8 +280,8 @@ export default function Pricing() {
 
               {/* Timeline */}
               <div
-                className={`text-[10px] font-semibold uppercase tracking-wider mb-5 flex items-center gap-1.5
-                  ${pkg.highlight ? 'text-white/50' : 'text-[#8b9381]'}`}
+                className={`text-xs font-semibold uppercase tracking-wider mb-5 flex items-center gap-1.5
+                  ${pkg.highlight ? 'text-white/60' : 'text-[#4d5c50]'}`}
               >
                 <span className="material-symbols-outlined" style={{ fontSize: '14px' }}>schedule</span>
                 {pkg.timeline}
@@ -290,7 +292,7 @@ export default function Pricing() {
                 href={`${waBase}${encodeURIComponent(pkg.waText)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`block text-center py-3 md:py-4 rounded-xl text-[10px] md:text-[11px] font-bold uppercase tracking-[0.15em] transition-all duration-300 active:scale-95
+                className={`block text-center py-3 md:py-4 rounded-xl text-xs md:text-[13px] font-bold uppercase tracking-[0.15em] transition-all duration-300 active:scale-95
                   ${pkg.highlight
                     ? 'bg-[#e9c176] text-[#00190d] hover:bg-[#ffdea5]'
                     : 'bg-[#00190d] text-white hover:bg-[#0a2f1f]'
@@ -307,7 +309,7 @@ export default function Pricing() {
           <h3 className="text-base md:text-2xl font-semibold text-[#00190d] mb-2 tracking-tight">
             Kenapa Harga Website Bisa Berbeda?
           </h3>
-          <p className="text-sm text-[#414843] leading-relaxed mb-5 md:mb-6">
+          <p className="text-sm md:text-base text-[#2d3530] leading-relaxed mb-5 md:mb-6">
             Karena setiap bisnis memiliki kebutuhan yang berbeda. Rootivara menyesuaikan solusi
             berdasarkan kebutuhan nyata bisnis, bukan menggunakan template asal jadi.
           </p>
@@ -315,7 +317,7 @@ export default function Pricing() {
             {whyDifferent.map((item) => (
               <span
                 key={item}
-                className="bg-white border border-[#c1c8c2]/30 text-[#414843] text-[10px] md:text-[11px] font-medium px-3 py-1.5 rounded-full uppercase tracking-wider"
+                className="bg-white border border-[#c1c8c2]/30 text-[#2d3530] text-xs md:text-[13px] font-medium px-3 py-1.5 rounded-full uppercase tracking-wider"
               >
                 {item}
               </span>

@@ -24,7 +24,7 @@ export default function TikTokSection() {
                 Belajar Sebelum Memulai
               </em>
             </h2>
-            <p className="text-sm md:text-base text-[#414843] leading-relaxed mb-6 md:mb-8">
+            <p className="text-sm md:text-base text-[#2d3530] leading-relaxed mb-6 md:mb-8">
               Sebelum memutuskan investasi website, lihat dulu konten edukasi kami di TikTok.
               Kami berbagi tips SEO, proses pengerjaan, before-after website, dan studi kasus
               client nyata — secara gratis.
@@ -43,7 +43,7 @@ export default function TikTokSection() {
                   >
                     {c.icon}
                   </span>
-                  <span className="text-[10px] md:text-[11px] font-semibold text-[#414843] uppercase tracking-[0.1em]">
+                  <span className="text-[10px] md:text-[11px] font-semibold text-[#2d3530] uppercase tracking-[0.1em]">
                     {c.label}
                   </span>
                 </div>
@@ -74,7 +74,7 @@ export default function TikTokSection() {
                 </div>
                 <div>
                   <span className="text-white text-sm font-bold block leading-none">@rootivara.com</span>
-                  <span className="text-white/40 text-[10px] uppercase tracking-wider">TikTok</span>
+                  <span className="text-white/70 text-[10px] uppercase tracking-wider">TikTok</span>
                 </div>
                 <div className="ml-auto bg-[#e9c176] text-[#00190d] text-[9px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
                   Follow
@@ -111,7 +111,7 @@ export default function TikTokSection() {
                     {/* Bottom label */}
                     <div className="absolute bottom-0 left-0 right-0 p-1.5">
                       <p className="text-white text-[8px] font-semibold leading-tight mb-0.5 line-clamp-2">{v.label}</p>
-                      <span className="text-white/50 text-[7px]">{v.views} views</span>
+                      <span className="text-white/75 text-[7px]">{v.views} views</span>
                     </div>
                   </div>
                 ))}

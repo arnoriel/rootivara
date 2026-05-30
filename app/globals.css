@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100;300;400;500;600;700;800;900&display=swap');
-
 @import "tailwindcss";
 
 /* ─── Base layer: resets that Tailwind utilities can still override ─── */
@@ -90,7 +88,10 @@
   .hero-entrance-delay-3 { animation-delay: 0.45s; }
   .hero-entrance-delay-4 { animation-delay: 0.60s; }
 
-  /* Material icons inline alignment */
+  /* Material icons inline alignment
+     The icon font may load async (non-blocking). Hide ligature text until loaded
+     to prevent layout shift / FOUC.  The `font-display:block` in the font URL
+     already handles this on the font side; this class is the component-level guard. */
   .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
     vertical-align: middle;

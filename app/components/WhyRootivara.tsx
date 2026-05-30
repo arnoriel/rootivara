@@ -45,7 +45,7 @@ export default function WhyRootivara() {
             </h2>
           </div>
           <div>
-            <p className="text-sm md:text-base text-white/60 leading-relaxed">
+            <p className="text-sm md:text-base text-white/80 leading-relaxed">
               Kami paham bagaimana website membantu bisnis terlihat lebih terpercaya dan menghasilkan
               customer. Bukan hanya membangun tampilan — tapi membangun kepercayaan.
             </p>
@@ -68,7 +68,7 @@ export default function WhyRootivara() {
               <h3 className="text-base md:text-xl font-semibold mb-3 leading-snug tracking-tight">
                 {r.title}
               </h3>
-              <p className="text-sm text-white/60 leading-relaxed">
+              <p className="text-sm text-white/80 leading-relaxed">
                 {r.desc}
               </p>
             </div>
@@ -83,7 +83,7 @@ export default function WhyRootivara() {
                 Saat visitor membuka website Anda, mereka harus langsung merasa:{' '}
                 <em className="text-[#e9c176]">"Bisnis ini terpercaya."</em>
               </p>
-              <p className="text-[11px] md:text-sm text-white/50">
+              <p className="text-[11px] md:text-sm text-white/70">
                 Itulah standar yang kami pegang di setiap project Rootivara.
               </p>
             </div>
